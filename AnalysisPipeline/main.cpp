@@ -13,8 +13,9 @@
 using namespace std;
 namespace fs = std::filesystem;
 
-static const char* OUTPUT_PATH = "payer_sources/extracted_route_data.json";
-static const char* STATE_PATH = "payer_sources/agent_state.txt";
+static const char* OUTPUT_ROOT = "outputs";
+static const char* OUTPUT_PATH = "outputs/extracted_route_data.json";
+static const char* STATE_PATH = "outputs/agent_state.txt";
 static const char* PAYER_SOURCES_ROOT = "payer_sources";
 
 struct AgentState {
@@ -125,6 +126,8 @@ AgentState loadState() {
 
 bool runOnce() {
     try {
+        fs::create_directories(OUTPUT_ROOT);
+
         vector<Payers> payers = discoverPayers();
         if (payers.empty()) {
             cerr << "No payer folders with source files found under " << PAYER_SOURCES_ROOT << ".\n";

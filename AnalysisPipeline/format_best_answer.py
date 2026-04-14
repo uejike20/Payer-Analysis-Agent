@@ -186,12 +186,12 @@ def main() -> None:
     )
     parser.add_argument(
         "--input",
-        default="payer_sources/reconciled_routes.json",
+        default="outputs/reconciled_routes.json",
         help="Path to reconciled routes JSON.",
     )
     parser.add_argument(
         "--output",
-        default="payer_sources/best_answer.json",
+        default="outputs/best_answer.json",
         help="Path for the cleaned best answer output.",
     )
     args = parser.parse_args()
@@ -199,6 +199,7 @@ def main() -> None:
     input_path = Path(args.input)
     output_path = Path(args.output)
     data = read_json(input_path)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
 
     result: dict[str, Any] = {}
     for payer_key, payer_payload in data.items():

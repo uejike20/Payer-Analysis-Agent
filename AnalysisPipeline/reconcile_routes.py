@@ -10,10 +10,11 @@ from format_best_answer import clean_route
 
 
 ROOT = Path(__file__).resolve().parent
-INPUT_PATH = ROOT / "payer_sources" / "extracted_route_data.json"
-RECONCILED_PATH = ROOT / "payer_sources" / "reconciled_routes.json"
-CONFLICTS_PATH = ROOT / "payer_sources" / "conflicts_report.json"
-BEST_ANSWER_PATH = ROOT / "payer_sources" / "best_answer.json"
+OUTPUT_DIR = ROOT / "outputs"
+INPUT_PATH = OUTPUT_DIR / "extracted_route_data.json"
+RECONCILED_PATH = OUTPUT_DIR / "reconciled_routes.json"
+CONFLICTS_PATH = OUTPUT_DIR / "conflicts_report.json"
+BEST_ANSWER_PATH = OUTPUT_DIR / "best_answer.json"
 
 
 @dataclass(order=True)
@@ -174,6 +175,8 @@ def collect_drug_conflicts(sources: list[dict[str, Any]]) -> tuple[dict[str, Any
 
 
 def main() -> None:
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
     raw_bytes = INPUT_PATH.read_bytes()
     raw_text = raw_bytes.decode("utf-8", errors="replace")
     payload = json.loads(raw_text)

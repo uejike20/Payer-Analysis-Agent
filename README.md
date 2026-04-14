@@ -8,8 +8,8 @@ The agent runs continuously, retries on failure, and persists basic state betwee
 
 - Reads payer source files under `AnalysisPipeline/payer_sources/<payer_key>/`
 - Extracts and composes structured route data
-- Writes output to a JSON file
-- Stores agent runtime state in `AnalysisPipeline/payer_sources/agent_state.txt`
+- Writes output JSON files under `AnalysisPipeline/outputs/`
+- Stores agent runtime state in `AnalysisPipeline/outputs/agent_state.txt`
 
 ## Prerequisites
 
@@ -72,13 +72,14 @@ g++ -std=c++17 -Wall -Wextra -pedantic \
    - `phone_transcript.txt`
    - `web_page.txt`
    - `denial_letter.txt`
-3. Wait for next cycle (or restart container) and the agent will include `anthem` automatically in `extracted_route_data.json`
+3. Wait for next cycle (or restart container) and the agent will include `anthem` automatically in `AnalysisPipeline/outputs/extracted_route_data.json`
 
 ## Project Layout
 
 - `AnalysisPipeline/main.cpp` - agent loop and orchestration
 - `AnalysisPipeline/Payers.*` - payer-level source aggregation
 - `AnalysisPipeline/ProviderManual.*`, `PhoneTranscript.*`, `WebPage.*`, `DenialLetter.*` - source readers
-- `AnalysisPipeline/payer_sources/` - input and output data files
+- `AnalysisPipeline/payer_sources/` - source input data files only
+- `AnalysisPipeline/outputs/` - generated outputs (`extracted_route_data.json`, `reconciled_routes.json`, `conflicts_report.json`, `best_answer.json`)
 - `Dockerfile` - multi-stage container build
 - `docker-compose.yml` - local service orchestration

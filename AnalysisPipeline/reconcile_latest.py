@@ -314,17 +314,17 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Reconcile payer route data using the freshest available source.")
     parser.add_argument(
         "--input",
-        default="payer_sources/extracted_route_data.json",
+        default="outputs/extracted_route_data.json",
         help="Path to extracted structured payer data.",
     )
     parser.add_argument(
         "--routes-output",
-        default="payer_sources/reconciled_routes.json",
+        default="outputs/reconciled_routes.json",
         help="Path for reconciled best-route output.",
     )
     parser.add_argument(
         "--conflicts-output",
-        default="payer_sources/conflicts_report.json",
+        default="outputs/conflicts_report.json",
         help="Path for conflict report output.",
     )
     args = parser.parse_args()
@@ -350,6 +350,8 @@ def main() -> None:
 
     routes_output = Path(args.routes_output)
     conflicts_output = Path(args.conflicts_output)
+    routes_output.parent.mkdir(parents=True, exist_ok=True)
+    conflicts_output.parent.mkdir(parents=True, exist_ok=True)
     routes_output.write_text(json.dumps(reconciled_routes, indent=2))
     conflicts_output.write_text(json.dumps(conflict_reports, indent=2))
 

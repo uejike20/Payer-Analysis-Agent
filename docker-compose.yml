@@ -9,3 +9,4 @@ services:
     restart: unless-stopped
     volumes:
       - ./AnalysisPipeline/payer_sources:/app/AnalysisPipeline/payer_sources
+      - ./AnalysisPipeline/outputs:/app/AnalysisPipeline/outputs
