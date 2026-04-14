@@ -1,0 +1,51 @@
+name: Smoke test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  docker-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build image
+        run: docker build -t payer-analysis-agent:ci .
+
+      - name: Run one-shot pipeline
+        run: |
+          set -euo pipefail
+          OUT="${RUNNER_TEMP}/pipeline_outputs"
+          rm -rf "$OUT"
+          mkdir -p "$OUT"
+          docker run --rm \
+            -v "$GITHUB_WORKSPACE/AnalysisPipeline/payer_sources:/app/AnalysisPipeline/payer_sources" \
+            -v "$OUT:/app/AnalysisPipeline/outputs" \
+            payer-analysis-agent:ci
+
+      - name: Validate outputs
+        run: |
+          set -euo pipefail
+          OUT="${RUNNER_TEMP}/pipeline_outputs"
+          for f in extracted_route_data.json reconciled_routes.json conflicts_report.json best_answer.json; do
+            test -f "$OUT/$f" || { echo "missing $f"; ls -la "$OUT"; exit 1; }
+          done
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          import os
+          out = Path(os.environ["RUNNER_TEMP"]) / "pipeline_outputs"
+          for name in (
+              "extracted_route_data.json",
+              "reconciled_routes.json",
+              "conflicts_report.json",
+              "best_answer.json",
+          ):
+              data = json.loads((out / name).read_text(encoding="utf-8"))
+              assert isinstance(data, dict), f"{name} root must be object"
+          print("all json ok")
+          PY
