@@ -44,6 +44,28 @@ Stop:
 docker compose down
 ```
 
+## Custom Test Data (Bind Mounts)
+
+If you want to run the image against your own local payer source files, mount your input and output folders:
+
+```bash
+docker run --rm \
+  -v "/absolute/path/to/your/payer_sources:/app/AnalysisPipeline/payer_sources" \
+  -v "/absolute/path/to/your/output_folder:/app/AnalysisPipeline/outputs" \
+  payer-analysis-agent:latest
+```
+
+Example:
+
+```bash
+docker run --rm \
+  -v "/Users/utibeejike/Downloads/my-custom-payer-sources:/app/AnalysisPipeline/payer_sources" \
+  -v "/Users/utibeejike/Downloads/my-agent-outputs:/app/AnalysisPipeline/outputs" \
+  payer-analysis-agent:latest
+```
+
+Your source folder should contain payer directories (for example `aetna/`, `cigna/`, `humana/`) with source files, and generated outputs will be written to the mounted output folder.
+
 ## Run Locally (Native)
 
 From `AnalysisPipeline/`:
