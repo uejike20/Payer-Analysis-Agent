@@ -10,3 +10,7 @@ AnalysisPipeline/main
 # Distribution artifacts
 *.tar
 *.tar.gz
+
+# Runtime-generated outputs
+AnalysisPipeline/outputs/
+AnalysisPipeline/handoff_test_outputs/
