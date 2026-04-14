@@ -22,6 +22,8 @@ jobs:
           OUT="${RUNNER_TEMP}/pipeline_outputs"
           rm -rf "$OUT"
           mkdir -p "$OUT"
+          # Image runs as UID 1000; runner is a different UID. Allow the container to write the bind mount.
+          chmod 777 "$OUT"
           docker run --rm \
             -v "$GITHUB_WORKSPACE/AnalysisPipeline/payer_sources:/app/AnalysisPipeline/payer_sources" \
             -v "$OUT:/app/AnalysisPipeline/outputs" \
