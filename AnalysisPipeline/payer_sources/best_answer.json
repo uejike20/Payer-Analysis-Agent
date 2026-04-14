@@ -1,0 +1,258 @@
+{
+  "aetna": {
+    "payer": "Aetna",
+    "best_route": {
+      "submission_method": {
+        "methods": [
+          "portal",
+          "fax"
+        ],
+        "portal_url": "www.availity.com",
+        "portal_note": "AGENT: Sure, I can help with that. For Remicade prior authorizations, you'll want to submit through our online portal at Availity. That's the preferred method now."
+      },
+      "contact_info": {
+        "fax_number": "(888) 267-3300",
+        "phone_status_only": "(800) 624-0756",
+        "appeal_fax": "(888) 267-3350"
+      },
+      "required_documents": {
+        "pa_form": "PA-1847",
+        "chart_note_window_days": 60,
+        "lab_window_days": 90
+      },
+      "drug_specific_requirements": {
+        "Entyvio": {
+          "step_therapy_required": true,
+          "auth_period_months": 6,
+          "notes": "Requires step therapy documentation. Initial auth period: 6 months."
+        },
+        "Keytruda": {
+          "auth_period_months": 3,
+          "notes": "PD-L1 testing results required Oncologist letter of medical necessity required Initial auth: 3 months. Renewal: 6 months. Turnaround: 5 business days standard, 24 hours urgent"
+        },
+        "Remicade": {
+          "step_therapy_required": true,
+          "notes": "AGENT: For Remicade you'll need the PA request form \u2014 you can pull that from Availity \u2014 chart notes within 90 days, labs, letter of medical necessity, and step therapy documentation showing the patient tried and failed conventional therapy first."
+        },
+        "Rituxan": {
+          "auth_period_months": 6,
+          "notes": "CD20 positive status documentation required Initial auth: 6 months. Renewal: 12 months. Turnaround: 5 business days standard, 24 hours urgent"
+        }
+      },
+      "restrictions": {
+        "chart_note_policy_update": "Additionally, the submitted chart notes are dated November 15, 2025, which exceeds the 90-day documentation window per our updated policy (effective February 1, 2026).",
+        "fax_old_status": "Submission was received via fax at (888) 267-3277. Please note this fax line is no longer active for infusion medication prior authorizations as of February 2026. Your request was routed manually which caused processing delays.",
+        "appeal_deadline_days": 60,
+        "turnaround_standard_days": 5,
+        "turnaround_portal_days": "3-5",
+        "turnaround_urgent_hours": 24,
+        "turnaround_fax_days_note": "Removed invalid phone-number-like value."
+      }
+    }
+  },
+  "unitedhealthcare": {
+    "payer": "UnitedHealthcare",
+    "best_route": {
+      "submission_method": {
+        "methods": [
+          "fax",
+          "portal"
+        ],
+        "portal_url": "uhcprovider.com",
+        "portal_note": "AGENT: Yes, uhcprovider.com. Actually for Remicade specifically, we're asking providers to go through the portal now because we need the biosimilar step therapy documentation in a specific format. The portal has the updated form. If you fax it, make sure you use form UHC-PA-200 \u2014 that's the new specialty drug form. The old UHC-PA-100 is being phased out."
+      },
+      "contact_info": {
+        "fax_number": "(800) 699-4702",
+        "fax_number_general": "(800) 699-4711",
+        "fax_number_specialty": "(800) 699-4702",
+        "phone_urgent": "(800) 331-6689",
+        "phone_hours": "Available M-F, 8am-6pm EST",
+        "appeal_phone": "(800) 331-6689"
+      },
+      "required_documents": {
+        "pa_form": "UHC-PA-200",
+        "pa_form_old": "UHC-PA-200",
+        "pa_form_note": "AGENT: Yes, uhcprovider.com. Actually for Remicade specifically, we're asking providers to go through the portal now because we need the biosimilar step therapy documentation in a specific format. The portal has the updated form. If you fax it, make sure you use form UHC-PA-200 \u2014 that's the new specialty drug form. The old UHC-PA-100 is being phased out.",
+        "chart_note_window_days": 60
+      },
+      "drug_specific_requirements": {
+        "Herceptin": {
+          "step_therapy_required": true,
+          "biosimilar_required": true,
+          "auth_period_months": 6,
+          "notes": "HER2 testing"
+        },
+        "Keytruda": {
+          "auth_period_months": 3,
+          "notes": "Biomarker testing"
+        },
+        "Ocrevus": {
+          "auth_period_months": 12,
+          "notes": "Neurologist confirmation"
+        },
+        "Remicade": {
+          "step_therapy_required": true,
+          "biosimilar_required": true,
+          "notes": "AGENT: Chart notes within 60 days, labs, LMN, and you absolutely need the step therapy documentation showing they tried a biosimilar first, or a clear medical justification for why brand Remicade is needed. That's the number one reason we deny Remicade requests."
+        },
+        "Rituxan": {
+          "step_therapy_required": true,
+          "biosimilar_required": true,
+          "auth_period_months": 6,
+          "notes": "CD20+ documentation"
+        }
+      },
+      "restrictions": {
+        "chart_note_policy_update": "The request for brand Remicade has been denied. Per UnitedHealthcare policy effective January 1, 2026, biosimilar infliximab products must be trialed before brand Remicade will be authorized. No documentation of biosimilar trial or medical justification for brand preference was included in the submission.",
+        "appeal_deadline_days": 60,
+        "turnaround_standard_days": "3-5",
+        "turnaround_portal_days": "1",
+        "turnaround_fax_days": "5-7",
+        "turnaround_urgent_hours": 24
+      }
+    }
+  },
+  "cigna": {
+    "payer": "Cigna",
+    "best_route": {
+      "submission_method": {
+        "methods": [
+          "portal",
+          "fax"
+        ],
+        "portal_url": "www.cignaforhcp.com"
+      },
+      "contact_info": {
+        "fax_number": "(800) 768-4695",
+        "fax_number_general": "(800) 768-4700",
+        "phone_hours": "M-F 8am-8pm EST, Sat 9am-1pm EST"
+      },
+      "required_documents": {
+        "pa_form": "CG-PA-001",
+        "chart_note_window_days": 60
+      },
+      "drug_specific_requirements": {
+        "Entyvio": {
+          "step_therapy_required": true,
+          "auth_period_months": 6,
+          "notes": "For Crohn's or UC only \u2014 diagnosis must be confirmed Requires failure of anti-TNF therapy OR documented contraindication Auth period: 6 months Standard turnaround: 7 business days"
+        },
+        "Keytruda": {
+          "auth_period_months": 3,
+          "notes": "FDA-approved indication documentation required Biomarker testing per NCCN guidelines Auth period: 3 months Standard turnaround: 5 business days"
+        },
+        "Remicade": {
+          "biosimilar_preferred": true,
+          "auth_period_months": 6,
+          "notes": "Requires documentation of conventional therapy failure Auth period: 6 months (initial), 12 months (renewal) Standard turnaround: 7 business days NOTE: Effective 2025, biosimilar preferred for new starts"
+        },
+        "Tysabri": {
+          "auth_period_months": 12,
+          "notes": "JCV antibody testing REQUIRED before authorization TOUCH Prescribing Program enrollment verification required Auth period: 12 months Standard turnaround: 7 business days"
+        }
+      },
+      "restrictions": {
+        "chart_note_policy_update": "1. Form CG-PA-001 was used. Effective January 2026, infusion drug precertifications require the updated form CG-PA-002. The new form includes required biosimilar attestation fields.",
+        "appeal_deadline_days": 60,
+        "turnaround_standard_days": 7,
+        "turnaround_urgent_hours": 24
+      }
+    }
+  },
+  "blue_cross_blue_shield": {
+    "payer": "Blue Cross Blue Shield",
+    "best_route": {
+      "submission_method": {
+        "methods": [
+          "fax"
+        ],
+        "portal_url": "www.anthem.com/providers"
+      },
+      "contact_info": {
+        "fax_number": "(844) 405-0296",
+        "phone_hours": "M-F 8am-6pm local time",
+        "appeal_fax": "(844) 405-0299"
+      },
+      "required_documents": {
+        "pa_form": "PA-2201",
+        "chart_note_window_days": 25
+      },
+      "drug_specific_requirements": {
+        "Herceptin": {
+          "biosimilar_preferred": true,
+          "notes": "HER2 testing results. Biosimilar preferred for new starts."
+        },
+        "Keytruda": {
+          "notes": "Biomarker documentation. Oncology treatment plan required."
+        },
+        "Ocrevus": {
+          "notes": "Neurologist must submit. MRI within 12 months."
+        },
+        "Remicade": {
+          "step_therapy_required": true,
+          "notes": "Step therapy required (biosimilar first for new starts). Prior DMARD trial required for RA indication."
+        }
+      },
+      "restrictions": {
+        "chart_note_policy_update": "Additionally, chart notes submitted were dated August 2025, which is outside the 90-day documentation window per our November 2025 policy update.",
+        "turnaround_standard_days": 5,
+        "turnaround_portal_days": "3-5",
+        "turnaround_fax_days": "5-7",
+        "turnaround_urgent_hours": 24
+      }
+    }
+  },
+  "humana": {
+    "payer": "Humana",
+    "best_route": {
+      "submission_method": {
+        "methods": [
+          "fax",
+          "portal"
+        ],
+        "portal_url": "www.availity.com",
+        "portal_note": "AGENT 3: OK for Rituxan on commercial plans, the fax number is (800) 523-0023. That's the same as it's always been. You can also submit through Availity but honestly our Availity integration has been having issues \u2014 I'd fax it if I were you."
+      },
+      "contact_info": {
+        "fax_number": "(800) 523-0023",
+        "phone_status_only": "(800) 555-2546",
+        "phone_urgent": "(800) 555-2546",
+        "phone_hours": "M-F 8am-5pm CST"
+      },
+      "required_documents": {
+        "pa_form": "HUM-AUTH-2026",
+        "pa_form_old": "HUM-AUTH-2026",
+        "pa_form_note": "AGENT 3: We actually released a new form \u2014 HUM-AUTH-2026. It went into effect January 1st. The old form will still get processed but it might get kicked back because it doesn't have the biosimilar attestation section. Let me give you the direct link... actually I don't have it handy. It should be on humana.com/providers under the forms section.",
+        "chart_note_window_days": 3
+      },
+      "drug_specific_requirements": {
+        "Entyvio": {
+          "auth_period_months": 6,
+          "notes": "Anti-TNF failure or contraindication documentation. Auth: 6 months."
+        },
+        "Ocrevus": {
+          "auth_period_months": 12,
+          "notes": "MS specialist must submit. JCV testing recommended. Auth: 12 months."
+        },
+        "Remicade": {
+          "step_therapy_required": true,
+          "biosimilar_preferred": true,
+          "auth_period_months": 6,
+          "notes": "Step therapy required \u2014 must trial conventional DMARD first. Biosimilar attestation required for new starts. Auth: 6 months."
+        },
+        "Rituxan": {
+          "step_therapy_required": true,
+          "notes": "AGENT 3: For Rituxan you'll need the PA form, chart notes within 90 days \u2014 we changed that from 60, that's on the new form \u2014 labs showing CD20 positive, LMN, and if it's for RA you need step therapy documentation. For lymphoma or CLL indications, no step therapy needed."
+        }
+      },
+      "restrictions": {
+        "denial_reason": "REASON: 1. STEP THERAPY NOT MET: For the RA indication, Humana requires documentation of trial and failure of at least one conventional DMARD (e.g., methotrexate) AND one biosimilar rituximab product before brand Rituxan will be authorized. Submission included methotrexate failure documentation but no biosimilar trial or justification. 2. OUTDATED DOCUMENTATION: Chart notes provided are dated September 2025 \u2014 outside the 90-day window per the January 2026 policy update. 3. FORM VERSION: Submission used form HUM-AUTH-2024, which does not include the biosimilar attestation section. Please resubmit using HUM-AUTH-2026.",
+        "chart_note_policy_update": "2. OUTDATED DOCUMENTATION: Chart notes provided are dated September 2025 \u2014 outside the 90-day window per the January 2026 policy update.",
+        "appeal_deadline_days": 60,
+        "turnaround_standard_days": 3,
+        "turnaround_fax_days": "10-14",
+        "turnaround_urgent_hours": 48
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+--- SOURCE METADATA ---
+Source: Scraped from https://www.cignaforhcp.com/prior-authorization/infusion-therapy. Scraped date: March 26, 2026.
+--- END METADATA ---
+
+Cigna for Healthcare Professionals | Infusion Therapy Prior Authorization
+URL: https://www.cignaforhcp.com/prior-authorization/infusion-therapy
+Page notice: "We are currently migrating our prior authorization system. Some features may be temporarily unavailable. Last updated: August 2025."
+
+INFUSION THERAPY PRIOR AUTHORIZATION
+
+SUBMISSION METHODS:
+
+ONLINE (RECOMMENDED): CignaforHCP Portal
+- Log in at www.cignaforhcp.com
+- Navigate to Precertification > New Request
+- System availability: M-F 6am-11pm EST
+
+FAX: (800) 768-4695
+- Use form CG-PA-001
+- Processing time: 7-10 business days
+
+PHONE (URGENT/STATUS): (800) 768-4688
+- M-F 8am-8pm EST, Sat 9am-1pm EST
+
+REQUIRED DOCUMENTATION:
+• Cigna Precertification Form (CG-PA-001)
+• Physician notes within 60 days
+• Diagnostic results
+• Treatment plan
+• Prior treatment history for biologics
+
+IMPORTANT DRUG UPDATES FOR 2025:
+- Remicade: Biosimilar preferred for new starts effective July 2025
+- Tysabri: JCV antibody testing now required every 6 months (previously annual)
+- Entyvio: Anti-TNF failure documentation now requires specific drug names and durations
+
+TURNAROUND TIMES:
+Standard: 7 business days
+Urgent: 24 hours
+Note: If submitting via fax, allow additional 2-3 business days for intake processing
+
+For assistance: (800) 768-4688
+
+© 2025 Cigna Healthcare

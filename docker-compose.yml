@@ -1,0 +1,11 @@
+services:
+  authpipeline:
+    container_name: authpipeline-agent
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /app/AnalysisPipeline
+    command: ["/usr/local/bin/authpipeline"]
+    restart: unless-stopped
+    volumes:
+      - ./AnalysisPipeline/payer_sources:/app/AnalysisPipeline/payer_sources

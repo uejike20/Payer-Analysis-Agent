@@ -1,0 +1,39 @@
+--- SOURCE METADATA ---
+Source: Scraped from https://www.aetna.com/health-care-professionals/prior-authorization/infusion-medications.html. Scraped date: March 25, 2026.
+--- END METADATA ---
+
+Aetna | Prior Authorization for Infusion Medications
+URL: https://www.aetna.com/health-care-professionals/prior-authorization/infusion-medications.html
+Last updated on page: October 2024
+
+PRIOR AUTHORIZATION FOR INFUSION MEDICATIONS
+
+Effective January 1, 2024, all infusion medication prior authorization requests must be submitted through one of the following methods:
+
+PREFERRED: Availity Portal (www.availity.com)
+- Log in with your Aetna provider credentials
+- Select "Authorizations & Referrals"
+- Average turnaround: 3-5 business days
+
+FAX: (888) 267-3277
+- Use Aetna PA Request Form AET-PA-2024
+- Average turnaround: 5-7 business days
+
+PHONE: PA status inquiries only — (800) 624-0756, Option 3
+
+REQUIRED DOCUMENTATION:
+• Completed PA Request Form
+• Chart notes (within 60 days of request)
+• Supporting lab results
+• Letter of medical necessity
+• Step therapy documentation (where applicable)
+
+DRUG-SPECIFIC NOTES:
+Remicade: Requires step therapy documentation. Initial auth period: 6 months.
+Keytruda: PD-L1 testing required. Initial auth period: 3 months.
+Rituxan: CD20+ documentation required. Initial auth period: 6 months.
+Entyvio: Requires step therapy documentation. Initial auth period: 6 months.
+
+For questions, contact Aetna Provider Services at (800) 624-0756.
+
+© 2024 Aetna Inc.

@@ -1,0 +1,48 @@
+--- SOURCE METADATA ---
+Source: Phone call to Cigna PA department, (800) 768-4688. Call date: March 24, 2026. Agent: Denise, ID CG-3390.
+--- END METADATA ---
+
+PHONE CALL TRANSCRIPT
+Date: March 24, 2026
+Called: (800) 768-4688
+Purpose: Verify current PA process for Entyvio and general infusion drugs
+
+[IVR] Thank you for calling Cigna healthcare. For members, press 1. For healthcare providers, press 2.
+[Pressed 2]
+[IVR] For prior authorization and precertification, press 1. For claims, press 2. For credentialing, press 3.
+[Pressed 1]
+[IVR] For prior authorization status, press 1. For new submissions, press 2. For appeals, press 3.
+[Pressed 2]
+[Hold - 22 minutes]
+
+AGENT: Cigna precertification, this is Denise, agent CG-3390. How can I assist?
+
+CALLER: Hi Denise, I need to verify the process for submitting an Entyvio prior auth.
+
+AGENT: Of course. So the easiest way is through the CignaforHCP portal. But I should let you know — we're in the middle of migrating to a new system. The old portal still works but it's been glitchy. If you get an error, try again or fax it.
+
+CALLER: What's the fax number?
+
+AGENT: For infusion drugs, you want (800) 768-4695. Actually wait — let me check. [pause] OK so there's been a change. For infusion drugs specifically, we have a new dedicated line: (800) 768-4700. The old 4695 number still works but it goes to the general medical PA queue, so it's slower.
+
+CALLER: Since when?
+
+AGENT: I believe that changed in January of this year. 2026.
+
+CALLER: OK. And what documentation for Entyvio?
+
+AGENT: You'll need the precert form — and use the new one, CG-PA-002, not the old 001. You'll need chart notes within 90 days — we updated that recently, used to be 60. Diagnosis confirmation for Crohn's or UC, documentation showing the patient failed anti-TNF therapy, and a treatment plan with dosing.
+
+CALLER: The provider manual says chart notes within 60 days.
+
+AGENT: That's outdated. It's 90 days as of January 2026. The manual hasn't been updated — I know, it's confusing. I apologize.
+
+CALLER: What's the turnaround?
+
+AGENT: We're running a bit behind honestly. Standard is supposed to be 7 business days but right now it's more like 10-12 because of the system migration. Urgent is still 24 hours though. If you have something urgent, call us and we'll flag it.
+
+CALLER: That's helpful, thank you Denise.
+
+AGENT: You're welcome. Reference number for this call is CG-2026-03-88412.
+
+[Call ended]

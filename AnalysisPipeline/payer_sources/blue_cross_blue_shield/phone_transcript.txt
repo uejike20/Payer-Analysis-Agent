@@ -1,0 +1,42 @@
+--- SOURCE METADATA ---
+Source: Phone call to Anthem BCBS, (800) 274-7767. Call date: March 20, 2026. Agent: Terrence, ID ANT-5567.
+--- END METADATA ---
+
+PHONE CALL TRANSCRIPT
+Date: March 20, 2026
+Called: (800) 274-7767
+Purpose: Confirm PA fax number and process for Herceptin
+
+[IVR] Thank you for calling Anthem Blue Cross Blue Shield. For members, press 1. For providers, press 2. For pharmacies, press 3.
+[Pressed 2]
+[IVR] For prior authorization, press 1. For claims and billing, press 2. For eligibility, press 3. For all other provider inquiries, press 0.
+[Pressed 1]
+[IVR] For medical drug and infusion authorizations, press 1. For outpatient procedures, press 2. For inpatient admissions, press 3.
+[Pressed 1]
+[Hold - 6 minutes]
+
+AGENT: Anthem provider services, this is Terrence, agent ANT-5567. How can I help today?
+
+CALLER: Hi Terrence, I need to submit a PA for Herceptin for a commercial member in California. Can you confirm the fax number?
+
+AGENT: Sure. For medical drug PAs, the fax is (844) 405-0296. That hasn't changed.
+
+CALLER: Great. And documentation requirements for Herceptin?
+
+AGENT: You'll need the PA form ANT-MED-PA-25, chart notes within 60 days, HER2 testing showing positive status, oncology treatment plan, and — this is important — if the patient hasn't tried a biosimilar first, you need to include a medical justification for brand Herceptin. We've been denying a lot of brand Herceptin requests that don't address the biosimilar question.
+
+CALLER: Is there a specific biosimilar you want them to try?
+
+AGENT: We don't mandate a specific one, but the formulary prefers Ogivri or Herzuma. If the oncologist has a clinical reason for brand, just document it clearly and we'll review it.
+
+CALLER: What's the turnaround?
+
+AGENT: Standard 5 business days from complete submission. I'd emphasize "complete" — we're seeing a lot of submissions come in missing the HER2 results or without the biosimilar justification, and then it gets pended and the clock resets.
+
+CALLER: One more question — a patient in Ohio, same situation. Same process?
+
+AGENT: Same fax number, same form. The medical policy is the same across our commercial plans. Only difference might be if they're on a Blue plan that's not Anthem — like Highmark or Independence. Those are separate companies with their own processes.
+
+CALLER: Got it, thanks Terrence.
+
+[Call ended]

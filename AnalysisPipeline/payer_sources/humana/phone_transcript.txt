@@ -1,0 +1,62 @@
+--- SOURCE METADATA ---
+Source: Phone call to Humana PA line, (800) 555-2546. Call date: March 19, 2026. Multiple transfer attempts.
+--- END METADATA ---
+
+PHONE CALL TRANSCRIPT
+Date: March 19, 2026
+Called: (800) 555-2546
+Purpose: Verify PA process for Rituxan, get current fax number
+
+[IVR] Welcome to Humana. For Medicare plans, press 1. For commercial plans, press 2. For Medicaid, press 3. For providers, press 4.
+[Pressed 4]
+[IVR] For prior authorization, press 1. For claims, press 2. For eligibility and benefits, press 3.
+[Pressed 1]
+[IVR] Please hold while we connect you to the next available representative.
+[Hold - 35 minutes]
+
+AGENT 1: Humana provider services, this is Angela. How can I help?
+
+CALLER: Hi Angela, I need to verify the fax number and process for submitting a Rituxan PA for a commercial member.
+
+AGENT 1: Let me look into that. One moment... Actually I think this needs to go to our specialty pharmacy team. Let me transfer you.
+
+[Transfer - hold 8 minutes]
+
+AGENT 2: Specialty pharmacy, this is Devon.
+
+CALLER: Hi Devon, I'm trying to verify the PA submission process for Rituxan infusion for a commercial plan member.
+
+AGENT 2: For Rituxan... OK so medical benefit infusion drugs, that's actually not specialty pharmacy, that's medical management. I don't know why they transferred you here. Let me send you back.
+
+[Transfer - hold 14 minutes]
+
+AGENT 3: Medical management, this is Tanya, representative HUM-2290. Sorry about the runaround. How can I help?
+
+CALLER: No worries. I need the fax number for Rituxan PA submissions and the current requirements.
+
+AGENT 3: OK for Rituxan on commercial plans, the fax number is (800) 523-0023. That's the same as it's always been. You can also submit through Availity but honestly our Availity integration has been having issues — I'd fax it if I were you.
+
+CALLER: The provider manual mentions form HUM-AUTH-2024. Is that current?
+
+AGENT 3: We actually released a new form — HUM-AUTH-2026. It went into effect January 1st. The old form will still get processed but it might get kicked back because it doesn't have the biosimilar attestation section. Let me give you the direct link... actually I don't have it handy. It should be on humana.com/providers under the forms section.
+
+CALLER: And documentation requirements?
+
+AGENT 3: For Rituxan you'll need the PA form, chart notes within 90 days — we changed that from 60, that's on the new form — labs showing CD20 positive, LMN, and if it's for RA you need step therapy documentation. For lymphoma or CLL indications, no step therapy needed.
+
+CALLER: Turnaround?
+
+AGENT 3: Standard is 7 business days but honestly we're running behind. The real turnaround is more like 10-14 days right now. We're dealing with a system migration. Urgent is supposed to be 48 hours and we're holding to that.
+
+CALLER: 48 hours? The other payers do 24 hours urgent.
+
+AGENT 3: Yeah, our policy is 48 hours for urgent. I know it's longer. If it's a true emergency — patient already scheduled for infusion — call us and ask for an expedited review, we can sometimes get it done same day but no guarantees.
+
+CALLER: Thanks Tanya. Appreciate you helping after all those transfers.
+
+AGENT 3: Of course. Anything else?
+
+CALLER: No, that's everything.
+
+[Call ended]
+Total call time: 1 hour 12 minutes

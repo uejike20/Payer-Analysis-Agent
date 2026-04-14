@@ -1,0 +1,58 @@
+--- SOURCE METADATA ---
+Source: UnitedHealthcare Provider Manual 2025, Section 8: Prior Authorization for Specialty Drugs. Downloaded from uhcprovider.com, February 2025.
+--- END METADATA ---
+
+UNITEDHEALTHCARE PROVIDER MANUAL — 2025
+Section 8: Prior Authorization for Specialty & Infused Medications
+
+8.1 SUBMISSION METHODS
+
+UnitedHealthcare accepts prior authorization requests through the following channels:
+
+PRIMARY: UHC Provider Portal (www.uhcprovider.com)
+- Navigate to Prior Auth > New Request
+- Fastest turnaround: 3-5 business days
+
+FAX: (800) 699-4711
+- Attach UHC Prior Authorization Form UHC-PA-100
+- Turnaround: 5-7 business days
+
+PHONE: For urgent requests ONLY — (800) 331-6689
+- Available M-F, 8am-6pm EST
+- Must follow up with written documentation within 48 hours
+
+8.2 REQUIRED DOCUMENTATION
+
+- UHC Prior Authorization Form (UHC-PA-100)
+- Clinical notes from most recent visit (within 60 days)
+- Relevant lab/diagnostic results
+- Prescribing physician's letter of medical necessity
+- Prescription/order for the infused medication
+- For biologics: prior treatment history
+
+8.3 DRUG-SPECIFIC REQUIREMENTS
+
+REMICADE (infliximab):
+- Must document failure of methotrexate or other conventional DMARD (RA indication)
+- Weight-based dosing documentation required
+- Auth period: 6 months initial, 12 months renewal
+- Biosimilar preferred — must document medical rationale if requesting brand
+
+KEYTRUDA (pembrolizumab):
+- Biomarker testing results (PD-L1, MSI-H, TMB) as applicable
+- Staging documentation
+- Auth period: 3 months, renewable
+
+OCREVUS (ocrelizumab):
+- MS diagnosis confirmed by neurologist
+- MRI results within 12 months
+- Auth period: 12 months
+
+8.4 IMPORTANT NOTES
+
+- Submissions missing required documentation will be pended for 14 calendar days
+- If documentation not received within 14 days, request is auto-denied
+- All PA determinations are made within 5 business days of complete submission
+- Urgent requests: determination within 24 hours
+
+Last revised: December 2024

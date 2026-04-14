@@ -1,0 +1,56 @@
+--- SOURCE METADATA ---
+Source: Aetna Provider Manual 2025, Chapter 12: Prior Authorization Requirements. Downloaded from aetna.com/providers, March 2025.
+--- END METADATA ---
+
+AETNA PROVIDER MANUAL — 2025 EDITION
+Chapter 12: Prior Authorization Requirements for Infused Medications
+
+12.1 SUBMISSION METHODS
+
+Prior authorization requests for infused medications should be submitted via fax to:
+
+    Aetna PA Department Fax: (888) 267-3277
+
+Requests may also be submitted through the Availity portal at www.availity.com. Providers must have an active Availity account linked to their Aetna provider ID.
+
+NOTE: Phone submissions are NOT accepted for infused medication PAs. Phone inquiries regarding PA status can be directed to (800) 624-0756, Option 3, then Option 1.
+
+12.2 REQUIRED DOCUMENTATION
+
+All PA requests for infused medications must include:
+- Completed Aetna Prior Authorization Request Form (Form AET-PA-2025)
+- Current chart notes (within 60 days)
+- Lab results supporting medical necessity (within 90 days)
+- Letter of medical necessity from prescribing physician
+- For biologic medications: documentation of step therapy compliance (see Section 12.4)
+
+12.3 DRUG-SPECIFIC REQUIREMENTS
+
+REMICADE (infliximab):
+- Diagnosis must be confirmed by specialist
+- Documentation of failure on conventional therapy required
+- Initial auth: 6 months. Renewal: 12 months.
+- Turnaround: 5 business days standard, 24 hours urgent
+
+KEYTRUDA (pembrolizumab):
+- PD-L1 testing results required
+- Oncologist letter of medical necessity required
+- Initial auth: 3 months. Renewal: 6 months.
+- Turnaround: 5 business days standard, 24 hours urgent
+
+RITUXAN (rituximab):
+- CD20 positive status documentation required
+- Initial auth: 6 months. Renewal: 12 months.
+- Turnaround: 5 business days standard, 24 hours urgent
+
+12.4 STEP THERAPY REQUIREMENTS
+
+For Remicade and Entyvio: member must have documented trial and failure of at least one conventional therapy before biologic will be authorized. Documentation must include dates of therapy, duration, and reason for discontinuation.
+
+12.5 TURNAROUND TIMES
+
+Standard requests: 5 business days from receipt of complete submission
+Urgent requests: 24 hours from receipt
+Incomplete submissions will receive a request for additional information within 2 business days.
+
+Last updated: January 15, 2025

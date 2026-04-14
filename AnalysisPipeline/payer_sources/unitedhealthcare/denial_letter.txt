@@ -1,0 +1,31 @@
+--- SOURCE METADATA ---
+Source: Internal database. Denial letter for case PA-2103, patient PT-67432. Denial date: March 5, 2026.
+--- END METADATA ---
+
+UNITEDHEALTHCARE PRIOR AUTHORIZATION DETERMINATION
+Date: March 5, 2026
+Member: [REDACTED]
+Member ID: UHC-9920-88412
+Provider: Midwest Infusion Partners
+Drug: Remicade (infliximab) 400mg IV
+
+DETERMINATION: DENIED
+
+REASON:
+The request for brand Remicade has been denied. Per UnitedHealthcare policy effective January 1, 2026, biosimilar infliximab products must be trialed before brand Remicade will be authorized. No documentation of biosimilar trial or medical justification for brand preference was included in the submission.
+
+The submission was received via fax at (800) 699-4711. For future specialty drug submissions, please use (800) 699-4702 or submit through the UHC Provider Portal using form UHC-PA-200.
+
+REQUIRED FOR RESUBMISSION:
+1. Documentation of biosimilar trial and failure, OR
+2. Detailed medical justification for brand Remicade
+3. Updated chart notes (within 90 days)
+4. Completed form UHC-PA-200
+
+APPEAL RIGHTS:
+You may appeal this determination within 60 days. Submit appeals via:
+- Portal: uhcprovider.com > Appeals
+- Fax: (800) 699-4800
+- For expedited appeal: call (800) 331-6689
+
+UnitedHealthcare Prior Authorization Department

@@ -1,0 +1,44 @@
+--- SOURCE METADATA ---
+Source: Phone call to Aetna PA department, (800) 624-0756. Call date: March 22, 2026. Agent: Representative #4412.
+--- END METADATA ---
+
+PHONE CALL TRANSCRIPT
+Date: March 22, 2026
+Called: (800) 624-0756
+Purpose: Verify PA submission process for Remicade
+
+[IVR] Thank you for calling Aetna provider services. For pharmacy, press 1. For medical prior authorizations, press 3. For claims, press 4.
+[Pressed 3]
+[IVR] For prior authorization status, press 1. For new prior authorization submissions, press 2. For appeals, press 3.
+[Pressed 2]
+[Hold - 12 minutes]
+
+AGENT: Thank you for calling Aetna prior authorization, this is Karen, representative 4412. How can I help you?
+
+CALLER: Hi Karen, I'm calling to verify the submission process for a Remicade prior auth for a commercial plan member.
+
+AGENT: Sure, I can help with that. For Remicade prior authorizations, you'll want to submit through our online portal at Availity. That's the preferred method now.
+
+CALLER: We've been faxing to (888) 267-3277 — is that still active?
+
+AGENT: That fax number was decommissioned as of February 1st, 2026. All infused medication PAs should now go through Availity or through our new fax line at (888) 267-3300. But honestly, Availity is much faster — fax submissions are taking 7-10 business days right now because of the transition.
+
+CALLER: Got it. And what documentation do you need?
+
+AGENT: For Remicade you'll need the PA request form — you can pull that from Availity — chart notes within 90 days, labs, letter of medical necessity, and step therapy documentation showing the patient tried and failed conventional therapy first.
+
+CALLER: The provider manual says chart notes within 60 days. Is it 60 or 90?
+
+AGENT: It's 90 days now. That was updated in the February policy revision. The manual might not reflect that yet.
+
+CALLER: And turnaround time?
+
+AGENT: Standard is 5 business days once we have everything. But like I said, fax submissions are running slower right now — more like 7-10 days. Availity submissions are still on track at 5 days. Urgent is still 24 hours either way.
+
+CALLER: Perfect, thank you Karen.
+
+AGENT: You're welcome. Is there anything else I can help with?
+
+CALLER: No, that's all.
+
+[Call ended]

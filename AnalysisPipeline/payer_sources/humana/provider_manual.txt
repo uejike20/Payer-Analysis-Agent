@@ -1,0 +1,58 @@
+--- SOURCE METADATA ---
+Source: Humana Provider Manual, Prior Authorization Guidelines for Injectable & Infusible Drugs, 2024 edition. Downloaded from humana.com/providers, August 2024.
+--- END METADATA ---
+
+HUMANA PROVIDER MANUAL
+Prior Authorization: Injectable & Infusible Drugs
+2024 Guidelines
+
+SECTION 1: HOW TO SUBMIT
+
+Humana accepts prior authorization requests for infused medications via:
+
+PREFERRED — Availity (www.availity.com)
+Select Humana > Authorizations > New Auth Request
+Turnaround: 5-7 business days
+
+FAX — (800) 523-0023
+Use Humana Prior Authorization Form (HUM-AUTH-2024)
+Turnaround: 7-10 business days
+
+PHONE — (800) 555-2546 (Provider PA Hotline)
+For urgent/expedited requests only
+M-F 8am-5pm CST
+Must fax supporting documentation within 48 hours
+
+STATUS CHECKS — (800) 555-2546, Option 2
+Or check via Availity portal
+
+SECTION 2: DOCUMENTATION
+
+Required for all infusion drug PAs:
+- Humana PA Form (HUM-AUTH-2024)
+- Physician notes (within 60 days)
+- Lab results relevant to diagnosis
+- Letter of medical necessity
+- Treatment plan with dosing schedule
+- Insurance verification confirmation
+
+SECTION 3: DRUG FORMULARY NOTES
+
+REMICADE: Step therapy required — must trial conventional DMARD first. Biosimilar attestation required for new starts. Auth: 6 months.
+
+RITUXAN: CD20+ documentation. Step therapy required for RA indication only. Auth: 6 months.
+
+ENTYVIO: Anti-TNF failure or contraindication documentation. Auth: 6 months.
+
+OCREVUS: MS specialist must submit. JCV testing recommended. Auth: 12 months.
+
+SECTION 4: TURNAROUND
+Standard: 7 business days
+Urgent: 48 hours
+
+SECTION 5: APPEALS
+Fax: (800) 523-0028
+Phone: (800) 555-2546, Option 4
+Written appeals to: Humana Appeals Department, PO Box 14165, Lexington KY 40512
+
+Effective: January 1, 2024

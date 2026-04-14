@@ -1,0 +1,54 @@
+--- SOURCE METADATA ---
+Source: Scraped from https://www.uhcprovider.com/en/prior-auth/infusion-drugs.html. Scraped date: March 20, 2026.
+--- END METADATA ---
+
+UnitedHealthcare | Prior Authorization for Infusion & Specialty Drugs
+URL: https://www.uhcprovider.com/en/prior-auth/infusion-drugs.html
+Page last updated: March 2026
+
+PRIOR AUTHORIZATION: INFUSION & SPECIALTY DRUGS
+
+Effective March 1, 2026, UnitedHealthcare has updated the prior authorization process for infusion medications.
+
+SUBMISSION OPTIONS:
+
+1. UHC PROVIDER PORTAL (PREFERRED)
+   www.uhcprovider.com > Prior Auth > Specialty Drug Request
+   Use form UHC-PA-200 (Specialty Drug Prior Authorization)
+   Turnaround: 3-5 business days
+
+2. FAX
+   Specialty Infusion PA Fax: (800) 699-4702
+   General Medical PA Fax: (800) 699-4711
+   Turnaround: 5-7 business days
+   NOTE: Use (800) 699-4702 for faster processing of infusion drugs
+
+3. PHONE (URGENT ONLY)
+   (800) 331-6689 — M-F, 8am-6pm EST
+   Written follow-up required within 48 hours
+
+WHAT'S NEW (March 2026):
+• Biosimilar step therapy is now REQUIRED for Remicade, Rituxan, and Herceptin
+• New form UHC-PA-200 replaces UHC-PA-100 for specialty drugs
+• Chart note window extended to 90 days (previously 60 days)
+• Portal submissions now receive auto-acknowledgment within 1 business day
+
+REQUIRED DOCUMENTATION:
+• Form UHC-PA-200
+• Chart notes (within 90 days — updated March 2026)
+• Lab results
+• Letter of medical necessity
+• Step therapy/biosimilar documentation (for applicable drugs)
+
+DRUG QUICK REFERENCE:
+| Drug | Step Therapy Required | Auth Period | Special Requirements |
+|------|----------------------|-------------|---------------------|
+| Remicade | Yes - biosimilar first | 6 months | Weight-based dosing docs |
+| Keytruda | No | 3 months | Biomarker testing |
+| Rituxan | Yes - biosimilar first | 6 months | CD20+ documentation |
+| Ocrevus | No | 12 months | Neurologist confirmation |
+| Herceptin | Yes - biosimilar first | 6 months | HER2 testing |
+
+Questions? Call (800) 331-6689 or message through the portal.
+
+© 2026 UnitedHealthcare

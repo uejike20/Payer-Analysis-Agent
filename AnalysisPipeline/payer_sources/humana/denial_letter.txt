@@ -1,0 +1,37 @@
+--- SOURCE METADATA ---
+Source: Internal database. Denial for case PA-1888, patient PT-39917. Denial date: March 8, 2026.
+--- END METADATA ---
+
+HUMANA PRIOR AUTHORIZATION DETERMINATION
+
+Date: March 8, 2026
+Case Reference: HUM-PA-2026-1888
+Member: [REDACTED]
+Member ID: HUM-390-552-1147
+Provider: Sunrise Infusion Center
+Drug: Rituxan (rituximab) 500mg IV
+Indication: Rheumatoid Arthritis
+
+DETERMINATION: DENIED
+
+REASON:
+The request is denied for the following reasons:
+
+1. STEP THERAPY NOT MET: For the RA indication, Humana requires documentation of trial and failure of at least one conventional DMARD (e.g., methotrexate) AND one biosimilar rituximab product before brand Rituxan will be authorized. Submission included methotrexate failure documentation but no biosimilar trial or justification.
+
+2. OUTDATED DOCUMENTATION: Chart notes provided are dated September 2025 — outside the 90-day window per the January 2026 policy update.
+
+3. FORM VERSION: Submission used form HUM-AUTH-2024, which does not include the biosimilar attestation section. Please resubmit using HUM-AUTH-2026.
+
+RESUBMISSION:
+Fax: (800) 523-0023
+Portal: Availity
+Include: HUM-AUTH-2026 form, updated chart notes, biosimilar trial documentation or medical justification
+
+APPEAL RIGHTS:
+File within 60 days of this notice.
+Fax: (800) 523-0028
+Phone: (800) 555-2546, Option 4
+Written: Humana Appeals, PO Box 14165, Lexington KY 40512
+
+Humana Medical Management Department

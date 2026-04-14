@@ -1,0 +1,36 @@
+--- SOURCE METADATA ---
+Source: Internal database. Denial letter for case PA-1955, patient PT-72818. Denial date: March 15, 2026.
+--- END METADATA ---
+
+CIGNA HEALTHCARE PRECERTIFICATION DETERMINATION
+Date: March 15, 2026
+Reference: PRE-2026-44891
+Member: [REDACTED]
+Member ID: CGN-551-887-2240
+Provider: Pinnacle Infusion Services
+Drug: Entyvio (vedolizumab) 300mg IV
+
+DETERMINATION: DENIED — INCOMPLETE SUBMISSION
+
+REASON:
+The precertification request was submitted via fax to (800) 768-4695. This submission was incomplete:
+
+1. Form CG-PA-001 was used. Effective January 2026, infusion drug precertifications require the updated form CG-PA-002. The new form includes required biosimilar attestation fields.
+
+2. Chart notes provided are dated October 12, 2025 — outside the 90-day documentation window (updated from 60 days per January 2026 policy revision, but notes still exceed even the new window).
+
+3. Anti-TNF failure documentation states "patient failed Humira" but does not include treatment dates, duration, or specific reason for discontinuation as required.
+
+RESUBMISSION INSTRUCTIONS:
+Submit via CignaforHCP portal or fax to the dedicated infusion line at (800) 768-4700 using form CG-PA-002. Include:
+- Updated chart notes within 90 days
+- Detailed anti-TNF treatment history (drug name, dates, duration, reason for discontinuation)
+- Completed CG-PA-002 form
+
+APPEAL RIGHTS:
+Appeals must be filed within 60 days.
+Fax: (800) 768-4699
+Phone: (800) 768-4688, Option 4
+Portal: CignaforHCP > Appeals
+
+Cigna Healthcare Precertification Department

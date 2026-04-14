@@ -1,0 +1,50 @@
+--- SOURCE METADATA ---
+Source: Anthem Blue Cross Blue Shield Provider Reference Guide 2025, Medical Drug Authorization section. Downloaded from anthem.com/providers, January 2025.
+--- END METADATA ---
+
+ANTHEM BLUE CROSS BLUE SHIELD
+Provider Reference Guide 2025
+Medical Drug Prior Authorization
+
+NOTE: BCBS plans vary by state. This guide covers Anthem BCBS commercial plans in CA, NY, OH, GA, IN, and VA. For other Blue plans, contact the local plan directly.
+
+SUBMISSION METHODS
+
+1. ONLINE: Provider portal at www.anthem.com/providers
+   - Select Medical Drug Auth > New Submission
+   - Turnaround: 3-5 business days
+
+2. FAX: (844) 405-0296
+   - Use Anthem Medical Drug PA Form (ANT-MED-PA-25)
+   - Turnaround: 5-7 business days
+
+3. PHONE: (800) 274-7767
+   - For urgent authorization requests only
+   - Follow up with written documentation within 24 hours
+   - M-F 8am-6pm local time
+
+DOCUMENTATION REQUIREMENTS
+
+Standard documentation for all infused drug PAs:
+- Completed PA form (ANT-MED-PA-25)
+- Office visit notes (within 60 days)
+- Relevant labs/diagnostics
+- Letter of medical necessity
+- Current medication list
+
+DRUG-SPECIFIC NOTES:
+
+REMICADE: Step therapy required (biosimilar first for new starts). Prior DMARD trial required for RA indication.
+KEYTRUDA: Biomarker documentation. Oncology treatment plan required.
+OCREVUS: Neurologist must submit. MRI within 12 months.
+HERCEPTIN: HER2 testing results. Biosimilar preferred for new starts.
+
+TURNAROUND:
+Standard: 5 business days
+Urgent: 24 hours
+
+APPEALS:
+Fax: (844) 405-0299
+Phone: (800) 274-7767, Option 5
+
+Effective: January 1, 2025

@@ -1,0 +1,683 @@
+{
+  "aetna": {
+    "payer": "Aetna",
+    "payer_key": "aetna",
+    "selection_policy": "latest_source_date_then_retrieved_date",
+    "field_conflicts": [
+      {
+        "field": "fax_number",
+        "chosen_value": "(888) 267-3300",
+        "chosen_source_id": "AET-SRC-002",
+        "chosen_source_type": "phone_transcript",
+        "resolution_rule": "latest_source_date_then_retrieved_date",
+        "candidates": [
+          {
+            "value": "(888) 267-3300",
+            "source_id": "AET-SRC-002",
+            "source_type": "phone_transcript",
+            "source_date": "March 22, 2026"
+          },
+          {
+            "value": "(888) 267-3277",
+            "source_id": "AET-SRC-001",
+            "source_type": "provider_manual",
+            "source_date": "January 15, 2025"
+          }
+        ]
+      },
+      {
+        "field": "pa_form",
+        "chosen_value": "PA-1847",
+        "chosen_source_id": "AET-SRC-004",
+        "chosen_source_type": "denial_letter",
+        "resolution_rule": "latest_source_date_then_retrieved_date",
+        "candidates": [
+          {
+            "value": "PA-1847",
+            "source_id": "AET-SRC-004",
+            "source_type": "denial_letter",
+            "source_date": "March 10, 2026"
+          },
+          {
+            "value": "AET-PA-2025",
+            "source_id": "AET-SRC-001",
+            "source_type": "provider_manual",
+            "source_date": "January 15, 2025"
+          },
+          {
+            "value": "AET-PA-2024",
+            "source_id": "AET-SRC-003",
+            "source_type": "web_page",
+            "source_date": "October 2024"
+          }
+        ]
+      },
+      {
+        "field": "chart_note_window_days",
+        "chosen_value": 60,
+        "chosen_source_id": "AET-SRC-002",
+        "chosen_source_type": "phone_transcript",
+        "resolution_rule": "latest_source_date_then_retrieved_date",
+        "candidates": [
+          {
+            "value": 60,
+            "source_id": "AET-SRC-002",
+            "source_type": "phone_transcript",
+            "source_date": "March 22, 2026"
+          },
+          {
+            "value": 90,
+            "source_id": "AET-SRC-004",
+            "source_type": "denial_letter",
+            "source_date": "March 10, 2026"
+          }
+        ]
+      },
+      {
+        "field": "turnaround_standard_days",
+        "chosen_value": 5,
+        "chosen_source_id": "AET-SRC-002",
+        "chosen_source_type": "phone_transcript",
+        "resolution_rule": "latest_source_date_then_retrieved_date",
+        "candidates": [
+          {
+            "value": 5,
+            "source_id": "AET-SRC-002",
+            "source_type": "phone_transcript",
+            "source_date": "March 22, 2026"
+          },
+          {
+            "value": "3-5",
+            "source_id": "AET-SRC-003",
+            "source_type": "web_page",
+            "source_date": "October 2024"
+          }
+        ]
+      },
+      {
+        "field": "turnaround_fax_days",
+        "chosen_value": "267-3300",
+        "chosen_source_id": "AET-SRC-002",
+        "chosen_source_type": "phone_transcript",
+        "resolution_rule": "latest_source_date_then_retrieved_date",
+        "candidates": [
+          {
+            "value": "267-3300",
+            "source_id": "AET-SRC-002",
+            "source_type": "phone_transcript",
+            "source_date": "March 22, 2026"
+          },
+          {
+            "value": "5-7",
+            "source_id": "AET-SRC-003",
+            "source_type": "web_page",
+            "source_date": "October 2024"
+          }
+        ]
+      },
+      {
+        "field": "drugs.Remicade",
+        "chosen_value": {
+          "step_therapy_required": true,
+          "notes": "AGENT: For Remicade you'll need the PA request form \u2014 you can pull that from Availity \u2014 chart notes within 90 days, labs, letter of medical necessity, and step therapy documentation showing the patient tried and failed conventional therapy first."
+        },
+        "chosen_source_id": "AET-SRC-002",
+        "chosen_source_type": "phone_transcript",
+        "resolution_rule": "latest_source_date_then_retrieved_date",
+        "candidates": [
+          {
+            "source_id": "AET-SRC-002",
+            "source_type": "phone_transcript",
+            "source_date": "March 22, 2026",
+            "value": {
+              "step_therapy_required": true,
+              "notes": "AGENT: For Remicade you'll need the PA request form \u2014 you can pull that from Availity \u2014 chart notes within 90 days, labs, letter of medical necessity, and step therapy documentation showing the patient tried and failed conventional therapy first."
+            }
+          },
+          {
+            "source_id": "AET-SRC-003",
+            "source_type": "web_page",
+            "source_date": "October 2024",
+            "value": {
+              "step_therapy_required": true,
+              "auth_period_months": 6,
+              "notes": "Requires step therapy documentation. Initial auth period: 6 months."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "unitedhealthcare": {
+    "payer": "UnitedHealthcare",
+    "payer_key": "unitedhealthcare",
+    "selection_policy": "latest_source_date_then_retrieved_date",
+    "field_conflicts": [
+      {
+        "field": "submission_methods",
+        "chosen_value": [
+          "fax",
+          "portal"
+        ],
+        "chosen_source_id": "UHC-SRC-002",
+        "chosen_source_type": "phone_transcript",
+        "resolution_rule": "latest_source_date_then_retrieved_date",
+        "candidates": [
+          {
+            "value": [
+              "fax",
+              "portal"
+            ],
+            "source_id": "UHC-SRC-002",
+            "source_type": "phone_transcript",
+            "source_date": "March 18, 2026"
+          },
+          {
+            "value": [
+              "portal",
+              "fax"
+            ],
+            "source_id": "UHC-SRC-003",
+            "source_type": "web_page",
+            "source_date": "March 2026"
+          },
+          {
+            "value": [
+              "portal",
+              "fax",
+              "phone_urgent_only"
+            ],
+            "source_id": "UHC-SRC-001",
+            "source_type": "provider_manual",
+            "source_date": "December 2024"
+          }
+        ]
+      },
+      {
+        "field": "portal_url",
+        "chosen_value": "uhcprovider.com",
+        "chosen_source_id": "UHC-SRC-002",
+        "chosen_source_type": "phone_transcript",
+        "resolution_rule": "latest_source_date_then_retrieved_date",
+        "candidates": [
+          {
+            "value": "uhcprovider.com",
+            "source_id": "UHC-SRC-002",
+            "source_type": "phone_transcript",
+            "source_date": "March 18, 2026"
+          },
+          {
+            "value": "www.uhcprovider.com/en/prior-auth/infusion-drugs.html.",
+            "source_id": "UHC-SRC-003",
+            "source_type": "web_page",
+            "source_date": "March 2026"
+          },
+          {
+            "value": "www.uhcprovider.com",
+            "source_id": "UHC-SRC-001",
+            "source_type": "provider_manual",
+            "source_date": "December 2024"
+          }
+        ]
+      },
+      {
+        "field": "fax_number",
+        "chosen_value": "(800) 699-4702",
+        "chosen_source_id": "UHC-SRC-002",
+        "chosen_source_type": "phone_transcript",
+        "resolution_rule": "latest_source_date_then_retrieved_date",
+        "candidates": [
+          {
+            "value": "(800) 699-4702",
+            "source_id": "UHC-SRC-002",
+            "source_type": "phone_transcript",
+            "source_date": "March 18, 2026"
+          },
+          {
+            "value": "(800) 699-4711",
+            "source_id": "UHC-SRC-001",
+            "source_type": "provider_manual",
+            "source_date": "December 2024"
+          }
+        ]
+      },
+      {
+        "field": "pa_form",
+        "chosen_value": "UHC-PA-200",
+        "chosen_source_id": "UHC-SRC-002",
+        "chosen_source_type": "phone_transcript",
+        "resolution_rule": "latest_source_date_then_retrieved_date",
+        "candidates": [
+          {
+            "value": "UHC-PA-200",
+            "source_id": "UHC-SRC-002",
+            "source_type": "phone_transcript",
+            "source_date": "March 18, 2026"
+          },
+          {
+            "value": "PA-2103",
+            "source_id": "UHC-SRC-004",
+            "source_type": "denial_letter",
+            "source_date": "March 5, 2026"
+          },
+          {
+            "value": "UHC-PA-100",
+            "source_id": "UHC-SRC-001",
+            "source_type": "provider_manual",
+            "source_date": "December 2024"
+          }
+        ]
+      },
+      {
+        "field": "chart_note_window_days",
+        "chosen_value": 60,
+        "chosen_source_id": "UHC-SRC-002",
+        "chosen_source_type": "phone_transcript",
+        "resolution_rule": "latest_source_date_then_retrieved_date",
+        "candidates": [
+          {
+            "value": 60,
+            "source_id": "UHC-SRC-002",
+            "source_type": "phone_transcript",
+            "source_date": "March 18, 2026"
+          },
+          {
+            "value": 90,
+            "source_id": "UHC-SRC-004",
+            "source_type": "denial_letter",
+            "source_date": "March 5, 2026"
+          }
+        ]
+      },
+      {
+        "field": "chart_note_policy_update",
+        "chosen_value": "The request for brand Remicade has been denied. Per UnitedHealthcare policy effective January 1, 2026, biosimilar infliximab products must be trialed before brand Remicade will be authorized. No documentation of biosimilar trial or medical justification for brand preference was included in the submission.",
+        "chosen_source_id": "UHC-SRC-004",
+        "chosen_source_type": "denial_letter",
+        "resolution_rule": "latest_source_date_then_retrieved_date",
+        "candidates": [
+          {
+            "value": "The request for brand Remicade has been denied. Per UnitedHealthcare policy effective January 1, 2026, biosimilar infliximab products must be trialed before brand Remicade will be authorized. No documentation of biosimilar trial or medical justification for brand preference was included in the submission.",
+            "source_id": "UHC-SRC-004",
+            "source_type": "denial_letter",
+            "source_date": "March 5, 2026"
+          },
+          {
+            "value": "\u2022 Chart note window extended to 90 days (previously 60 days)",
+            "source_id": "UHC-SRC-003",
+            "source_type": "web_page",
+            "source_date": "March 2026"
+          }
+        ]
+      },
+      {
+        "field": "drugs.Remicade",
+        "chosen_value": {
+          "step_therapy_required": true,
+          "biosimilar_required": true,
+          "notes": "AGENT: Chart notes within 60 days, labs, LMN, and you absolutely need the step therapy documentation showing they tried a biosimilar first, or a clear medical justification for why brand Remicade is needed. That's the number one reason we deny Remicade requests."
+        },
+        "chosen_source_id": "UHC-SRC-002",
+        "chosen_source_type": "phone_transcript",
+        "resolution_rule": "latest_source_date_then_retrieved_date",
+        "candidates": [
+          {
+            "source_id": "UHC-SRC-002",
+            "source_type": "phone_transcript",
+            "source_date": "March 18, 2026",
+            "value": {
+              "step_therapy_required": true,
+              "biosimilar_required": true,
+              "notes": "AGENT: Chart notes within 60 days, labs, LMN, and you absolutely need the step therapy documentation showing they tried a biosimilar first, or a clear medical justification for why brand Remicade is needed. That's the number one reason we deny Remicade requests."
+            }
+          },
+          {
+            "source_id": "UHC-SRC-003",
+            "source_type": "web_page",
+            "source_date": "March 2026",
+            "value": {
+              "step_therapy_required": true,
+              "biosimilar_required": true,
+              "auth_period_months": 6,
+              "notes": "Weight-based dosing docs"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "cigna": {
+    "payer": "Cigna",
+    "payer_key": "cigna",
+    "selection_policy": "latest_source_date_then_retrieved_date",
+    "field_conflicts": [
+      {
+        "field": "submission_methods",
+        "chosen_value": [
+          "portal",
+          "fax"
+        ],
+        "chosen_source_id": "CIG-SRC-002",
+        "chosen_source_type": "phone_transcript",
+        "resolution_rule": "latest_source_date_then_retrieved_date",
+        "candidates": [
+          {
+            "value": [
+              "portal",
+              "fax"
+            ],
+            "source_id": "CIG-SRC-002",
+            "source_type": "phone_transcript",
+            "source_date": "March 24, 2026"
+          },
+          {
+            "value": [
+              "fax"
+            ],
+            "source_id": "CIG-SRC-003",
+            "source_type": "web_page",
+            "source_date": ""
+          }
+        ]
+      },
+      {
+        "field": "pa_form",
+        "chosen_value": "PA-1955",
+        "chosen_source_id": "CIG-SRC-004",
+        "chosen_source_type": "denial_letter",
+        "resolution_rule": "latest_source_date_then_retrieved_date",
+        "candidates": [
+          {
+            "value": "PA-1955",
+            "source_id": "CIG-SRC-004",
+            "source_type": "denial_letter",
+            "source_date": "March 15, 2026"
+          },
+          {
+            "value": "CG-PA-001",
+            "source_id": "CIG-SRC-001",
+            "source_type": "provider_manual",
+            "source_date": "July 1, 2024"
+          }
+        ]
+      },
+      {
+        "field": "chart_note_window_days",
+        "chosen_value": 60,
+        "chosen_source_id": "CIG-SRC-002",
+        "chosen_source_type": "phone_transcript",
+        "resolution_rule": "latest_source_date_then_retrieved_date",
+        "candidates": [
+          {
+            "value": 60,
+            "source_id": "CIG-SRC-002",
+            "source_type": "phone_transcript",
+            "source_date": "March 24, 2026"
+          },
+          {
+            "value": 90,
+            "source_id": "CIG-SRC-004",
+            "source_type": "denial_letter",
+            "source_date": "March 15, 2026"
+          }
+        ]
+      }
+    ]
+  },
+  "blue_cross_blue_shield": {
+    "payer": "Blue Cross Blue Shield",
+    "payer_key": "blue_cross_blue_shield",
+    "selection_policy": "latest_source_date_then_retrieved_date",
+    "field_conflicts": [
+      {
+        "field": "submission_methods",
+        "chosen_value": [
+          "fax"
+        ],
+        "chosen_source_id": "BCBS-SRC-002",
+        "chosen_source_type": "phone_transcript",
+        "resolution_rule": "latest_source_date_then_retrieved_date",
+        "candidates": [
+          {
+            "value": [
+              "fax"
+            ],
+            "source_id": "BCBS-SRC-002",
+            "source_type": "phone_transcript",
+            "source_date": "March 20, 2026"
+          },
+          {
+            "value": [
+              "portal",
+              "fax"
+            ],
+            "source_id": "BCBS-SRC-001",
+            "source_type": "provider_manual",
+            "source_date": "January 1, 2025"
+          }
+        ]
+      },
+      {
+        "field": "pa_form",
+        "chosen_value": "PA-2201",
+        "chosen_source_id": "BCBS-SRC-004",
+        "chosen_source_type": "denial_letter",
+        "resolution_rule": "latest_source_date_then_retrieved_date",
+        "candidates": [
+          {
+            "value": "PA-2201",
+            "source_id": "BCBS-SRC-004",
+            "source_type": "denial_letter",
+            "source_date": "March 18, 2026"
+          },
+          {
+            "value": "ANT-MED-PA-25",
+            "source_id": "BCBS-SRC-001",
+            "source_type": "provider_manual",
+            "source_date": "January 1, 2025"
+          }
+        ]
+      },
+      {
+        "field": "chart_note_window_days",
+        "chosen_value": 25,
+        "chosen_source_id": "BCBS-SRC-002",
+        "chosen_source_type": "phone_transcript",
+        "resolution_rule": "latest_source_date_then_retrieved_date",
+        "candidates": [
+          {
+            "value": 25,
+            "source_id": "BCBS-SRC-002",
+            "source_type": "phone_transcript",
+            "source_date": "March 20, 2026"
+          },
+          {
+            "value": 60,
+            "source_id": "BCBS-SRC-001",
+            "source_type": "provider_manual",
+            "source_date": "January 1, 2025"
+          }
+        ]
+      },
+      {
+        "field": "turnaround_standard_days",
+        "chosen_value": 5,
+        "chosen_source_id": "BCBS-SRC-001",
+        "chosen_source_type": "provider_manual",
+        "resolution_rule": "latest_source_date_then_retrieved_date",
+        "candidates": [
+          {
+            "value": 5,
+            "source_id": "BCBS-SRC-001",
+            "source_type": "provider_manual",
+            "source_date": "January 1, 2025"
+          },
+          {
+            "value": "3-5",
+            "source_id": "BCBS-SRC-003",
+            "source_type": "web_page",
+            "source_date": ""
+          }
+        ]
+      }
+    ]
+  },
+  "humana": {
+    "payer": "Humana",
+    "payer_key": "humana",
+    "selection_policy": "latest_source_date_then_retrieved_date",
+    "field_conflicts": [
+      {
+        "field": "submission_methods",
+        "chosen_value": [
+          "fax",
+          "portal"
+        ],
+        "chosen_source_id": "HUM-SRC-002",
+        "chosen_source_type": "phone_transcript",
+        "resolution_rule": "latest_source_date_then_retrieved_date",
+        "candidates": [
+          {
+            "value": [
+              "fax",
+              "portal"
+            ],
+            "source_id": "HUM-SRC-002",
+            "source_type": "phone_transcript",
+            "source_date": "March 19, 2026"
+          },
+          {
+            "value": [
+              "portal",
+              "fax",
+              "phone_urgent_only"
+            ],
+            "source_id": "HUM-SRC-003",
+            "source_type": "web_page",
+            "source_date": "April 2025"
+          },
+          {
+            "value": [
+              "portal",
+              "fax"
+            ],
+            "source_id": "HUM-SRC-001",
+            "source_type": "provider_manual",
+            "source_date": "January 1, 2024"
+          }
+        ]
+      },
+      {
+        "field": "fax_number",
+        "chosen_value": "(800) 523-0023",
+        "chosen_source_id": "HUM-SRC-002",
+        "chosen_source_type": "phone_transcript",
+        "resolution_rule": "latest_source_date_then_retrieved_date",
+        "candidates": [
+          {
+            "value": "(800) 523-0023",
+            "source_id": "HUM-SRC-002",
+            "source_type": "phone_transcript",
+            "source_date": "March 19, 2026"
+          },
+          {
+            "value": "(800) 523-0028",
+            "source_id": "HUM-SRC-003",
+            "source_type": "web_page",
+            "source_date": "April 2025"
+          }
+        ]
+      },
+      {
+        "field": "pa_form",
+        "chosen_value": "HUM-AUTH-2026",
+        "chosen_source_id": "HUM-SRC-002",
+        "chosen_source_type": "phone_transcript",
+        "resolution_rule": "latest_source_date_then_retrieved_date",
+        "candidates": [
+          {
+            "value": "HUM-AUTH-2026",
+            "source_id": "HUM-SRC-002",
+            "source_type": "phone_transcript",
+            "source_date": "March 19, 2026"
+          },
+          {
+            "value": "PA-1888",
+            "source_id": "HUM-SRC-004",
+            "source_type": "denial_letter",
+            "source_date": "March 8, 2026"
+          },
+          {
+            "value": "HUM-AUTH-2024",
+            "source_id": "HUM-SRC-003",
+            "source_type": "web_page",
+            "source_date": "April 2025"
+          }
+        ]
+      },
+      {
+        "field": "chart_note_window_days",
+        "chosen_value": 3,
+        "chosen_source_id": "HUM-SRC-002",
+        "chosen_source_type": "phone_transcript",
+        "resolution_rule": "latest_source_date_then_retrieved_date",
+        "candidates": [
+          {
+            "value": 3,
+            "source_id": "HUM-SRC-002",
+            "source_type": "phone_transcript",
+            "source_date": "March 19, 2026"
+          },
+          {
+            "value": 60,
+            "source_id": "HUM-SRC-001",
+            "source_type": "provider_manual",
+            "source_date": "January 1, 2024"
+          }
+        ]
+      },
+      {
+        "field": "turnaround_standard_days",
+        "chosen_value": 3,
+        "chosen_source_id": "HUM-SRC-002",
+        "chosen_source_type": "phone_transcript",
+        "resolution_rule": "latest_source_date_then_retrieved_date",
+        "candidates": [
+          {
+            "value": 3,
+            "source_id": "HUM-SRC-002",
+            "source_type": "phone_transcript",
+            "source_date": "March 19, 2026"
+          },
+          {
+            "value": 7,
+            "source_id": "HUM-SRC-001",
+            "source_type": "provider_manual",
+            "source_date": "January 1, 2024"
+          }
+        ]
+      },
+      {
+        "field": "turnaround_fax_days",
+        "chosen_value": "10-14",
+        "chosen_source_id": "HUM-SRC-002",
+        "chosen_source_type": "phone_transcript",
+        "resolution_rule": "latest_source_date_then_retrieved_date",
+        "candidates": [
+          {
+            "value": "10-14",
+            "source_id": "HUM-SRC-002",
+            "source_type": "phone_transcript",
+            "source_date": "March 19, 2026"
+          },
+          {
+            "value": "5-7",
+            "source_id": "HUM-SRC-003",
+            "source_type": "web_page",
+            "source_date": "April 2025"
+          }
+        ]
+      }
+    ]
+  }
+}

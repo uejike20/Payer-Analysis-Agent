@@ -1,0 +1,49 @@
+--- SOURCE METADATA ---
+Source: Scraped from https://www.anthem.com/providers/prior-authorization/medical-drugs. Scraped date: March 22, 2026.
+--- END METADATA ---
+
+Anthem Blue Cross Blue Shield | Medical Drug Prior Authorization
+URL: https://www.anthem.com/providers/prior-authorization/medical-drugs
+Last updated: November 2025
+
+MEDICAL DRUG PRIOR AUTHORIZATION
+
+QUICK LINKS:
+[Download PA Form ANT-MED-PA-25]
+[Check Auth Status]
+[Drug-Specific Policies]
+
+HOW TO SUBMIT:
+
+PORTAL (FASTEST): anthem.com/providers > Medical Drug Auth
+Average turnaround: 3-5 business days
+
+FAX: (844) 405-0296
+Use form ANT-MED-PA-25
+Average turnaround: 5-7 business days
+
+PHONE (URGENT): (800) 274-7767 → Option 1 → Option 1
+Must submit written documentation within 24 hours
+
+CHECKLIST — WHAT TO INCLUDE:
+☑ Completed ANT-MED-PA-25 form
+☑ Office notes from most recent visit (within 90 days — updated Nov 2025)
+☑ Lab/diagnostic results supporting diagnosis
+☑ Letter of medical necessity (for specialty biologics)
+☑ Current medication list
+☑ Biosimilar step therapy attestation (for Remicade, Herceptin, Rituxan)
+
+COMMON DENIAL REASONS:
+1. Missing biosimilar justification (38% of denials)
+2. Outdated chart notes (22% of denials)
+3. Incomplete PA form (18% of denials)
+4. Missing lab results (12% of denials)
+
+TURNAROUND TIMES:
+Standard: 5 business days
+Urgent/Expedited: 24 hours
+
+NOTE FOR BLUE CARD / OUT-OF-STATE MEMBERS:
+If the member's Blue plan is not Anthem (e.g., Highmark, CareFirst, BCBS of Tennessee), you must contact the member's home plan directly. Anthem cannot process authorizations for non-Anthem Blue plans.
+
+© 2025 Anthem, Inc.

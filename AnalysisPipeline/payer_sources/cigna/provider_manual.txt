@@ -1,0 +1,69 @@
+--- SOURCE METADATA ---
+Source: Cigna Medical Coverage Policy Manual, Infusion Therapy Section. Downloaded from cigna.com/providers, November 2024.
+--- END METADATA ---
+
+CIGNA MEDICAL COVERAGE POLICY
+Infusion Therapy Prior Authorization Requirements
+
+EFFECTIVE DATE: July 1, 2024
+
+1. HOW TO SUBMIT
+
+Prior authorization for infused medications may be submitted through:
+
+A. CignaforHCP Portal (www.cignaforhcp.com)
+   - Select Precertification > New Request
+   - Recommended for fastest processing
+
+B. Fax: (800) 768-4695
+   - Use Cigna Precertification Request Form (CG-PA-001)
+   - Allow 7-10 business days for processing
+
+C. Phone: (800) 768-4688
+   - For urgent requests or status checks
+   - M-F 8am-8pm EST, Sat 9am-1pm EST
+
+2. DOCUMENTATION REQUIREMENTS
+
+All requests must include:
+- Cigna Precertification Request Form
+- Treating physician's notes (within 60 days)
+- Diagnostic test results supporting the diagnosis
+- Treatment plan including dosing schedule
+- Prior treatment history (required for all biologic medications)
+
+3. DRUG-SPECIFIC POLICIES
+
+REMICADE (infliximab):
+- Requires documentation of conventional therapy failure
+- Auth period: 6 months (initial), 12 months (renewal)
+- Standard turnaround: 7 business days
+- NOTE: Effective 2025, biosimilar preferred for new starts
+
+ENTYVIO (vedolizumab):
+- For Crohn's or UC only — diagnosis must be confirmed
+- Requires failure of anti-TNF therapy OR documented contraindication
+- Auth period: 6 months
+- Standard turnaround: 7 business days
+
+KEYTRUDA (pembrolizumab):
+- FDA-approved indication documentation required
+- Biomarker testing per NCCN guidelines
+- Auth period: 3 months
+- Standard turnaround: 5 business days
+
+TYSABRI (natalizumab):
+- JCV antibody testing REQUIRED before authorization
+- TOUCH Prescribing Program enrollment verification required
+- Auth period: 12 months
+- Standard turnaround: 7 business days
+
+4. TURNAROUND TIMES
+Standard: 7 business days
+Urgent: 24 hours (must specify urgent on form and call to confirm receipt)
+
+5. APPEALS
+Fax appeals to (800) 768-4699
+Phone appeals: (800) 768-4688, Option 4
+
+Last updated: June 2024

@@ -1,0 +1,37 @@
+--- SOURCE METADATA ---
+Source: Internal database. Denial for case PA-2201, patient PT-81005. Denial date: March 18, 2026.
+--- END METADATA ---
+
+ANTHEM BLUE CROSS BLUE SHIELD
+PRIOR AUTHORIZATION DETERMINATION NOTICE
+
+Date: March 18, 2026
+Reference: AUTH-2026-2201
+Member: [REDACTED]
+Member ID: BCB-440-221-6658
+Provider: Valley Health Infusion
+Drug: Herceptin (trastuzumab) 440mg IV
+State: California
+
+DETERMINATION: DENIED
+
+REASON FOR DENIAL:
+This request for brand Herceptin has been denied. Per Anthem policy effective July 2025, biosimilar trastuzumab (Ogivri, Herzuma, Kanjinti, or Trazimera) is preferred for new patient starts. The submission did not include:
+
+1. Documentation of biosimilar trial and clinical failure, OR
+2. Medical justification for brand-name Herceptin
+
+Additionally, chart notes submitted were dated August 2025, which is outside the 90-day documentation window per our November 2025 policy update.
+
+HOW TO RESUBMIT:
+Fax: (844) 405-0296
+Portal: anthem.com/providers
+Include: Updated chart notes, biosimilar trial documentation or medical justification, completed form ANT-MED-PA-25
+
+APPEAL PROCESS:
+Deadline: 180 days from this notice
+Fax appeals to: (844) 405-0299
+Phone: (800) 274-7767, Option 5
+Peer-to-peer review available upon request
+
+Anthem Blue Cross Blue Shield Utilization Management

@@ -1,0 +1,27 @@
+--- SOURCE METADATA ---
+Source: Internal database. Denial letter received for case PA-1847, patient PT-55219. Denial date: March 10, 2026.
+--- END METADATA ---
+
+AETNA PRIOR AUTHORIZATION DETERMINATION
+Date: March 10, 2026
+Member: [REDACTED]
+Member ID: AET-882-441-7729
+Provider: Coastal Care Infusion
+Drug: Remicade (infliximab) 300mg IV
+
+DETERMINATION: DENIED
+
+REASON FOR DENIAL:
+Submission was received via fax at (888) 267-3277. Please note this fax line is no longer active for infusion medication prior authorizations as of February 2026. Your request was routed manually which caused processing delays.
+
+Additionally, the submitted chart notes are dated November 15, 2025, which exceeds the 90-day documentation window per our updated policy (effective February 1, 2026).
+
+TO RESUBMIT:
+Please submit through Availity (www.availity.com) or fax to our new dedicated infusion PA line at (888) 267-3300. Include updated chart notes within 90 days of submission.
+
+TO APPEAL:
+Appeals must be submitted within 60 days of this determination. Fax appeals to (888) 267-3350 or submit through Availity.
+
+For questions regarding this determination, call (800) 624-0756, Option 3, Option 1.
+
+Aetna Prior Authorization Department

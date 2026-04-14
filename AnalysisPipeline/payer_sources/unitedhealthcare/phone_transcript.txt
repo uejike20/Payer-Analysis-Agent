@@ -1,0 +1,46 @@
+--- SOURCE METADATA ---
+Source: Phone call to UnitedHealthcare PA department, (800) 331-6689. Call date: March 18, 2026. Agent: Michael, ID UHC-7831.
+--- END METADATA ---
+
+PHONE CALL TRANSCRIPT
+Date: March 18, 2026
+Called: (800) 331-6689
+Purpose: Verify PA submission process for Remicade, confirm fax number
+
+[IVR] Welcome to UnitedHealthcare provider services. Para español, oprima 2. For pharmacy benefits, press 1. For medical benefits and prior authorization, press 2. For claims and eligibility, press 3.
+[Pressed 2]
+[IVR] If you are calling about an existing prior authorization, press 1. To start a new prior authorization, press 2. For all other inquiries, press 0.
+[Pressed 2]
+[IVR] For urgent prior authorizations that need determination within 24 hours, press 1. For standard requests, press 2.
+[Pressed 2]
+[Hold - 8 minutes]
+
+AGENT: UnitedHealthcare prior authorization, this is Michael, agent UHC-7831. Can I get your NPI to start?
+
+CALLER: Hi Michael, NPI is 1234567890. I'm calling to confirm the fax number for submitting a Remicade PA.
+
+AGENT: Let me pull that up. OK so for infusion medications, the fax number is (800) 699-4702. That goes directly to our specialty pharmacy PA team.
+
+CALLER: I have (800) 699-4711 from the provider manual. Is that wrong?
+
+AGENT: 4711 is the general medical PA fax. It still works, but for infusion drugs specifically, 4702 goes to the specialty team and they process faster. I'd recommend using 4702.
+
+CALLER: Got it. What about the portal — is that still an option?
+
+AGENT: Yes, uhcprovider.com. Actually for Remicade specifically, we're asking providers to go through the portal now because we need the biosimilar step therapy documentation in a specific format. The portal has the updated form. If you fax it, make sure you use form UHC-PA-200 — that's the new specialty drug form. The old UHC-PA-100 is being phased out.
+
+CALLER: The manual references UHC-PA-100.
+
+AGENT: Yeah, that's the old form. It still gets accepted but it's missing the biosimilar fields so it'll get pended and we'll have to call you for the additional info. Just use 200 and save yourself the trouble.
+
+CALLER: What docs do we need for Remicade?
+
+AGENT: Chart notes within 60 days, labs, LMN, and you absolutely need the step therapy documentation showing they tried a biosimilar first, or a clear medical justification for why brand Remicade is needed. That's the number one reason we deny Remicade requests.
+
+CALLER: Turnaround?
+
+AGENT: 5 business days standard, 24 hours urgent. But if we have to pend it for missing docs, the clock resets when we get the complete package.
+
+CALLER: Thanks Michael.
+
+[Call ended]
