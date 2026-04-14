@@ -5,9 +5,7 @@ services:
       context: .
       dockerfile: Dockerfile
     working_dir: /app/AnalysisPipeline
-    environment:
-      - AUTHPIPELINE_MODE=continuous
-    restart: unless-stopped
+    restart: "no"
     volumes:
       - ./AnalysisPipeline/payer_sources:/app/AnalysisPipeline/payer_sources
       - ./AnalysisPipeline/outputs:/app/AnalysisPipeline/outputs
