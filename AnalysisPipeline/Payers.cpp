@@ -4,6 +4,7 @@
 
 using namespace std;
 
+/** Construct payer wrapper and propagate payer key into each source parser. */
 Payers::Payers(string payer_key, string payer_display_name)
     : payer_key(std::move(payer_key)), payer_display_name(std::move(payer_display_name)) {
     provider_manual.setPayerKey(this->payer_key);
@@ -12,6 +13,7 @@ Payers::Payers(string payer_key, string payer_display_name)
     denial_letter.setPayerKey(this->payer_key);
 }
 
+/** Serialize this payer and all source records into one JSON entry. */
 string Payers::toJsonEntry() const {
     string json;
 

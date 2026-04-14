@@ -19,6 +19,8 @@ BEST_ANSWER_PATH = OUTPUT_DIR / "best_answer.json"
 
 @dataclass(order=True)
 class SourceStamp:
+    """Comparable source timestamp tuple used for recency ranking."""
+
     rank: tuple[int, int, int]
     retrieved_rank: tuple[int, int, int]
     source_id: str
@@ -41,6 +43,7 @@ MONTHS = {
 
 
 def parse_date(value: str | None) -> tuple[int, int, int]:
+    """Parse supported date strings into (year, month, day) for sorting."""
     if not value:
         return (0, 0, 0)
 
@@ -61,6 +64,7 @@ def parse_date(value: str | None) -> tuple[int, int, int]:
 
 
 def normalize(value: Any) -> str:
+    """Normalize values into comparable strings for conflict grouping."""
     if isinstance(value, list):
         return json.dumps(value, sort_keys=True)
     if isinstance(value, dict):
@@ -71,10 +75,12 @@ def normalize(value: Any) -> str:
 
 
 def normalize_drug_name(name: str) -> str:
+    """Canonicalize drug names to a stable display key."""
     return " ".join(part.capitalize() for part in name.replace("_", " ").split())
 
 
 def source_stamp(source: dict[str, Any]) -> SourceStamp:
+    """Build a sortable recency stamp for a source record."""
     return SourceStamp(
         rank=parse_date(source.get("source_date")),
         retrieved_rank=parse_date(source.get("retrieved_date")),
@@ -83,6 +89,7 @@ def source_stamp(source: dict[str, Any]) -> SourceStamp:
 
 
 def pick_latest(sources: list[dict[str, Any]], predicate) -> dict[str, Any] | None:
+    """Return the freshest source matching predicate, if any."""
     matching = [source for source in sources if predicate(source)]
     if not matching:
         return None
@@ -90,6 +97,7 @@ def pick_latest(sources: list[dict[str, Any]], predicate) -> dict[str, Any] | No
 
 
 def collect_scalar_conflicts(sources: list[dict[str, Any]], field: str) -> tuple[Any, dict[str, Any] | None, list[dict[str, Any]]]:
+    """Pick latest scalar field value and collect conflicting alternatives."""
     candidates: list[tuple[dict[str, Any], Any]] = []
     for source in sources:
         data = source.get("data", {})
@@ -125,6 +133,7 @@ def collect_scalar_conflicts(sources: list[dict[str, Any]], field: str) -> tuple
 
 
 def collect_drug_conflicts(sources: list[dict[str, Any]]) -> tuple[dict[str, Any], list[dict[str, Any]]]:
+    """Reconcile per-drug requirements and report cross-source disagreements."""
     all_drugs: dict[str, list[tuple[dict[str, Any], dict[str, Any]]]] = {}
 
     for source in sources:
@@ -175,6 +184,7 @@ def collect_drug_conflicts(sources: list[dict[str, Any]]) -> tuple[dict[str, Any
 
 
 def main() -> None:
+    """Reconcile extracted payer data and write route/conflict/best-answer outputs."""
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     raw_bytes = INPUT_PATH.read_bytes()

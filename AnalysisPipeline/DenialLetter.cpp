@@ -8,6 +8,7 @@
 using namespace std;
 
 namespace {
+/** Trim leading/trailing whitespace. */
 string trim(const string& text) {
     size_t start = text.find_first_not_of(" \t\r\n");
     if (start == string::npos) {
@@ -17,6 +18,7 @@ string trim(const string& text) {
     return text.substr(start, end - start + 1);
 }
 
+/** Return lowercase copy for case-insensitive matching. */
 string toLowerCopy(const string& text) {
     string lowered = text;
     for (size_t i = 0; i < lowered.size(); ++i) {
@@ -25,6 +27,7 @@ string toLowerCopy(const string& text) {
     return lowered;
 }
 
+/** Map payer key to stable source ID prefix. */
 string payerPrefix(const string& payer_key) {
     if (payer_key == "aetna") return "AET";
     if (payer_key == "unitedhealthcare") return "UHC";
@@ -34,18 +37,10 @@ string payerPrefix(const string& payer_key) {
     return "SRC";
 }
 
-string joinFields(const vector<string>& fields, const string& separator) {
-    string joined;
-    for (size_t i = 0; i < fields.size(); ++i) {
-        joined += fields[i];
-        if (i + 1 < fields.size()) {
-            joined += separator;
-        }
-    }
-    return joined;
-}
+/** Join fields with separator when building JSON fragments. */
 }
 
+/** Escape text for safe JSON output. */
 string DenialLetter::jsonEscape(const string& text) const {
     string escaped;
     for (size_t i = 0; i < text.size(); ++i) {
@@ -62,6 +57,7 @@ string DenialLetter::jsonEscape(const string& text) const {
     return escaped;
 }
 
+/** Read and parse denial-letter source for current payer. */
 void DenialLetter::sourceReader() {
     fax_number.clear();
     fax_number_old.clear();
@@ -170,6 +166,7 @@ void DenialLetter::sourceReader() {
     }
 }
 
+/** Serialize parsed denial-letter content as one source JSON record. */
 string DenialLetter::toJsonRecord() const {
     vector<string> fields;
     if (!fax_number_old.empty()) {

@@ -9,6 +9,7 @@
 using namespace std;
 
 namespace {
+/** Trim leading/trailing whitespace. */
 string trim(const string& text) {
     size_t start = text.find_first_not_of(" \t\r\n");
     if (start == string::npos) {
@@ -18,6 +19,7 @@ string trim(const string& text) {
     return text.substr(start, end - start + 1);
 }
 
+/** Return lowercase copy for case-insensitive matching. */
 string toLowerCopy(const string& text) {
     string lowered = text;
     for (size_t i = 0; i < lowered.size(); ++i) {
@@ -26,6 +28,7 @@ string toLowerCopy(const string& text) {
     return lowered;
 }
 
+/** Map payer key to stable source ID prefix. */
 string payerPrefix(const string& payer_key) {
     if (payer_key == "aetna") return "AET";
     if (payer_key == "unitedhealthcare") return "UHC";
@@ -35,6 +38,7 @@ string payerPrefix(const string& payer_key) {
     return "SRC";
 }
 
+/** Join fields with separator when building JSON fragments. */
 string joinFields(const vector<string>& fields, const string& separator) {
     string joined;
     for (size_t i = 0; i < fields.size(); ++i) {
@@ -47,6 +51,7 @@ string joinFields(const vector<string>& fields, const string& separator) {
 }
 }
 
+/** Escape text for safe JSON output. */
 string WebPage::jsonEscape(const string& text) const {
     string escaped;
     for (size_t i = 0; i < text.size(); ++i) {
@@ -63,6 +68,7 @@ string WebPage::jsonEscape(const string& text) const {
     return escaped;
 }
 
+/** Build JSON object fragment for parsed drug requirements. */
 string WebPage::buildDrugJson() const {
     vector<string> entries;
     for (size_t i = 0; i < drugs.size(); ++i) {
@@ -84,6 +90,7 @@ string WebPage::buildDrugJson() const {
     return "        \"drugs\": {\n" + joinFields(entries, ",\n") + "\n        }";
 }
 
+/** Read and parse web-page source for current payer. */
 void WebPage::sourceReader() {
     submission_methods.clear();
     fax_number.clear();
@@ -272,6 +279,7 @@ void WebPage::sourceReader() {
     }
 }
 
+/** Serialize parsed web-page content as one source JSON record. */
 string WebPage::toJsonRecord() const {
     vector<string> fields;
     vector<string> methods;

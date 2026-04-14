@@ -63,6 +63,7 @@ FIELD_GROUPS = {
 
 
 def parse_date(raw: str | None) -> datetime:
+    """Parse flexible source dates; unknown formats sort as oldest."""
     if not raw:
         return datetime.min
 
@@ -80,6 +81,7 @@ def parse_date(raw: str | None) -> datetime:
 
 
 def freshness_key(source: dict[str, Any]) -> tuple[datetime, datetime]:
+    """Return recency tuple used for sorting sources newest-first."""
     return (
         parse_date(source.get("source_date")),
         parse_date(source.get("retrieved_date")),
@@ -87,6 +89,7 @@ def freshness_key(source: dict[str, Any]) -> tuple[datetime, datetime]:
 
 
 def normalize_value(value: Any) -> Any:
+    """Normalize nested values into hashable forms for de-duplication."""
     if isinstance(value, list):
         return tuple(value)
     if isinstance(value, dict):
@@ -95,6 +98,7 @@ def normalize_value(value: Any) -> Any:
 
 
 def confidence_for_source(source_type: str, chosen_is_latest: bool) -> str:
+    """Assign a lightweight confidence label based on source type and freshness."""
     if source_type in {"phone_transcript", "denial_letter"} and chosen_is_latest:
         return "high"
     if chosen_is_latest:
@@ -105,6 +109,7 @@ def confidence_for_source(source_type: str, chosen_is_latest: bool) -> str:
 
 
 def collect_candidates(sources: list[dict[str, Any]], field: str) -> list[dict[str, Any]]:
+    """Collect all non-empty occurrences of a field with source metadata."""
     candidates: list[dict[str, Any]] = []
     for source in sources:
         data = source.get("data", {})
@@ -125,12 +130,14 @@ def collect_candidates(sources: list[dict[str, Any]], field: str) -> list[dict[s
 
 
 def choose_latest(candidates: list[dict[str, Any]]) -> dict[str, Any] | None:
+    """Pick the freshest candidate for a field."""
     if not candidates:
         return None
     return candidates[0]
 
 
 def build_conflict_entry(field: str, chosen: dict[str, Any], candidates: list[dict[str, Any]]) -> dict[str, Any] | None:
+    """Create a conflict report entry when multiple distinct values exist."""
     distinct = []
     seen = set()
     for candidate in candidates:
@@ -161,6 +168,7 @@ def build_conflict_entry(field: str, chosen: dict[str, Any], candidates: list[di
 
 
 def reconcile_drugs(sources: list[dict[str, Any]]) -> tuple[dict[str, Any], list[dict[str, Any]]]:
+    """Reconcile drug requirements and capture per-drug conflicts."""
     drug_sources: dict[str, list[dict[str, Any]]] = defaultdict(list)
 
     for source in sources:
@@ -225,6 +233,7 @@ def reconcile_drugs(sources: list[dict[str, Any]]) -> tuple[dict[str, Any], list
 
 
 def reconcile_payer(payer_key: str, payer_block: dict[str, Any]) -> tuple[dict[str, Any], dict[str, Any]]:
+    """Build reconciled route + conflict report for one payer."""
     sources = sorted(payer_block.get("sources", []), key=freshness_key, reverse=True)
     latest_source = sources[0] if sources else {}
 
@@ -282,6 +291,7 @@ def reconcile_payer(payer_key: str, payer_block: dict[str, Any]) -> tuple[dict[s
 
 
 def extract_best_route(payer_payload: dict[str, Any]) -> dict[str, Any]:
+    """Normalize different reconciler schemas to a flat best-route shape."""
     # Support both reconcile output schemas:
     # 1) {"best_route": {...}} from reconcile_routes.py
     # 2) grouped fields from reconcile_latest.py
@@ -311,6 +321,7 @@ def extract_best_route(payer_payload: dict[str, Any]) -> dict[str, Any]:
 
 
 def main() -> None:
+    """CLI entrypoint for latest-source reconciliation workflow."""
     parser = argparse.ArgumentParser(description="Reconcile payer route data using the freshest available source.")
     parser.add_argument(
         "--input",

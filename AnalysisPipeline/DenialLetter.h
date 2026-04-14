@@ -18,10 +18,13 @@ private:
     string appeal_phone;
     int appeal_deadline_days = 0;
 
+    /** Escape text for safe JSON string emission. */
     string jsonEscape(const string& text) const;
 
 public:
+    /** Read and parse denial_letter.txt for the configured payer key. */
     void sourceReader() override;
+    /** Serialize parsed denial-letter data as a source JSON record. */
     string toJsonRecord() const;
 };
 

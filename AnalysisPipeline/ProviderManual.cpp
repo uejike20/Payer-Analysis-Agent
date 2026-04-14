@@ -7,6 +7,7 @@
 using namespace std;
 
 namespace {
+/** Trim leading/trailing whitespace. */
 string trim(const string& text) {
     size_t start = 0;
     while (start < text.size() && isspace(static_cast<unsigned char>(text[start]))) {
@@ -21,6 +22,7 @@ string trim(const string& text) {
     return text.substr(start, end - start);
 }
 
+/** Return lowercase copy for case-insensitive matching. */
 string toLowerCopy(const string& text) {
     string lowered = text;
     for (size_t i = 0; i < lowered.size(); ++i) {
@@ -29,6 +31,7 @@ string toLowerCopy(const string& text) {
     return lowered;
 }
 
+/** Build uppercase snake-style key from free text. */
 string toUpperKey(const string& text) {
     string key;
     for (size_t i = 0; i < text.size(); ++i) {
@@ -42,6 +45,7 @@ string toUpperKey(const string& text) {
     return key;
 }
 
+/** Extract first phone-number-like token from text. */
 string extractPhoneNumber(const string& text) {
     size_t openParen = text.find('(');
     if (openParen == string::npos) {
@@ -66,6 +70,7 @@ string extractPhoneNumber(const string& text) {
     return trim(text.substr(openParen, end - openParen));
 }
 
+/** Return first integer found in text (0 when absent). */
 int findFirstNumber(const string& text) {
     for (size_t i = 0; i < text.size(); ++i) {
         if (isdigit(static_cast<unsigned char>(text[i]))) {
@@ -79,6 +84,7 @@ int findFirstNumber(const string& text) {
     return 0;
 }
 
+/** Remove bullets/numbering prefixes from a line. */
 string stripBulletPrefix(const string& text) {
     string cleaned = trim(text);
     if (!cleaned.empty() && (cleaned[0] == '-' || cleaned[0] == '*' || isdigit(static_cast<unsigned char>(cleaned[0])))) {
@@ -92,6 +98,7 @@ string stripBulletPrefix(const string& text) {
     return cleaned;
 }
 
+/** Heuristic detector for section boundary headings. */
 bool isSectionHeading(const string& text) {
     string trimmed = trim(text);
     string lowered = toLowerCopy(trimmed);
@@ -117,6 +124,7 @@ bool isSectionHeading(const string& text) {
 }
 }
 
+/** Escape text for safe JSON output. */
 string ProviderManual::jsonEscape(const string& text) const {
     string escaped;
 
@@ -138,6 +146,7 @@ string ProviderManual::jsonEscape(const string& text) const {
     return escaped;
 }
 
+/** Extract first line fragment after marker. */
 string ProviderManual::extractFirstMatch(const string& text, const string& marker) const {
     size_t start = text.find(marker);
     if (start == string::npos) {
@@ -153,6 +162,7 @@ string ProviderManual::extractFirstMatch(const string& text, const string& marke
     return trim(text.substr(start, end - start));
 }
 
+/** Extract first number appearing after marker phrase. */
 int ProviderManual::extractNumberAfterPhrase(const string& text, const string& marker) const {
     size_t start = text.find(marker);
     if (start == string::npos) {
@@ -162,6 +172,7 @@ int ProviderManual::extractNumberAfterPhrase(const string& text, const string& m
     return findFirstNumber(text.substr(start + marker.size()));
 }
 
+/** Parse source metadata fields from raw lines. */
 void ProviderManual::parseMetadata(const vector<string>& lines) {
     for (size_t i = 0; i < lines.size(); ++i) {
         string line = trim(lines[i]);
@@ -171,6 +182,7 @@ void ProviderManual::parseMetadata(const vector<string>& lines) {
     }
 }
 
+/** Parse submission channels, portal URL, and contact numbers. */
 void ProviderManual::parseSubmissionMethods(const vector<string>& lines) {
     bool hasPortal = false;
     bool hasFax = false;
@@ -246,6 +258,7 @@ void ProviderManual::parseSubmissionMethods(const vector<string>& lines) {
     }
 }
 
+/** Parse documentation window and form requirements. */
 void ProviderManual::parseDocumentation(const vector<string>& lines) {
     for (size_t i = 0; i < lines.size(); ++i) {
         string line = trim(lines[i]);
@@ -279,6 +292,7 @@ void ProviderManual::parseDocumentation(const vector<string>& lines) {
     }
 }
 
+/** Parse per-drug policy requirements from provider manual text. */
 void ProviderManual::parseDrugRequirements(const vector<string>& lines) {
     bool inDrugSection = false;
     regex drugHeaderPattern("^([A-Z0-9][A-Z0-9\\- ]*(?:\\([A-Za-z0-9\\- ]+\\))?):\\s*(.*)$");
@@ -391,6 +405,7 @@ void ProviderManual::parseDrugRequirements(const vector<string>& lines) {
     }
 }
 
+/** Parse standard and urgent turnaround windows. */
 void ProviderManual::parseTurnaround(const vector<string>& lines) {
     regex standardPattern("(\\d+)\\s+business days?\\s+standard|(standard[^0-9]*)(\\d+)\\s+business days?");
     regex urgentPattern("(\\d+)\\s+hours?\\s+urgent|(urgent[^0-9]*)(\\d+)\\s+hours?");
@@ -418,6 +433,7 @@ void ProviderManual::parseTurnaround(const vector<string>& lines) {
     }
 }
 
+/** Parse effective/last-updated source dates. */
 void ProviderManual::parseDates(const vector<string>& lines) {
     for (size_t i = 0; i < lines.size(); ++i) {
         string line = trim(lines[i]);
@@ -432,6 +448,7 @@ void ProviderManual::parseDates(const vector<string>& lines) {
     }
 }
 
+/** Parse coverage states list (when present in source). */
 void ProviderManual::parseCoverageStates(const vector<string>& lines) {
     for (size_t i = 0; i < lines.size(); ++i) {
         string line = trim(lines[i]);
@@ -464,6 +481,7 @@ void ProviderManual::parseCoverageStates(const vector<string>& lines) {
     }
 }
 
+/** Build JSON object fragment for parsed drug requirements. */
 string ProviderManual::buildDrugJson() const {
     string json = "        \"drugs\": {\n";
 
@@ -511,6 +529,7 @@ string ProviderManual::buildDrugJson() const {
     return json;
 }
 
+/** Read and parse provider manual source for current payer. */
 void ProviderManual::sourceReader() {
     submission_methods.clear();
     portal_url.clear();
@@ -581,6 +600,7 @@ void ProviderManual::sourceReader() {
     source_id = upperKey + "-SRC-001";
 }
 
+/** Serialize parsed provider-manual content as one source JSON record. */
 string ProviderManual::toJsonRecord() const {
     string json;
 

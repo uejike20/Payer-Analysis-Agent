@@ -24,11 +24,15 @@ private:
     int turnaround_urgent_hours = 0;
     vector<SourceDrugInfo> drugs;
 
+    /** Escape text for safe JSON string emission. */
     string jsonEscape(const string& text) const;
+    /** Build JSON fragment for parsed drug requirements. */
     string buildDrugJson() const;
 
 public:
+    /** Read and parse phone_transcript.txt for the configured payer key. */
     void sourceReader() override;
+    /** Serialize parsed phone-transcript data as a source JSON record. */
     string toJsonRecord() const;
 };
 

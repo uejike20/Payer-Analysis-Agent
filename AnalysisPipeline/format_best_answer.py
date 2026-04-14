@@ -10,11 +10,13 @@ from typing import Any
 
 
 def normalize_drug_name(name: str) -> str:
+    """Canonicalize drug keys for stable presentation ordering."""
     cleaned = name.strip().lstrip("-").strip()
     return " ".join(part.capitalize() for part in cleaned.split())
 
 
 def normalize_drugs(drugs: dict[str, Any]) -> dict[str, Any]:
+    """Merge drug aliases/casing variations into a single sorted map."""
     normalized: dict[str, Any] = {}
     for raw_name, details in drugs.items():
         key = normalize_drug_name(raw_name)
@@ -25,6 +27,7 @@ def normalize_drugs(drugs: dict[str, Any]) -> dict[str, Any]:
 
 
 def looks_like_phone_number(value: Any) -> bool:
+    """Detect strings that likely represent phone numbers, not durations."""
     if not isinstance(value, str):
         return False
     digits = re.sub(r"\D", "", value)
@@ -33,6 +36,7 @@ def looks_like_phone_number(value: Any) -> bool:
 
 
 def looks_like_case_id(value: Any) -> bool:
+    """Detect denial-case IDs that should not be treated as form names."""
     if not isinstance(value, str):
         return False
     # Denial letters often include case IDs like PA-1847, which are not form names.
@@ -40,6 +44,7 @@ def looks_like_case_id(value: Any) -> bool:
 
 
 def looks_like_form_code(value: Any) -> bool:
+    """Detect probable prior-auth form codes (e.g., UHC-PA-200)."""
     if not isinstance(value, str):
         return False
     token = value.strip().upper()
@@ -47,6 +52,7 @@ def looks_like_form_code(value: Any) -> bool:
 
 
 def extract_form_code_from_text(text: Any) -> str | None:
+    """Extract the first form-like token from free text notes."""
     if not isinstance(text, str) or not text.strip():
         return None
     # Capture form-like tokens such as UHC-PA-200, HUM-AUTH-2026, CG-PA-002.
@@ -58,6 +64,7 @@ def extract_form_code_from_text(text: Any) -> str | None:
 
 
 def is_placeholder_denial_reason(value: Any) -> bool:
+    """Filter generic denial headers that contain no actionable reason."""
     if not isinstance(value, str):
         return False
     normalized = value.strip().upper()
@@ -70,6 +77,7 @@ def is_placeholder_denial_reason(value: Any) -> bool:
 
 
 def clean_route(route: dict[str, Any]) -> dict[str, Any]:
+    """Convert raw reconciled fields into a reader-friendly final shape."""
     cleaned = dict(route)
     drugs = cleaned.get("drugs")
     if isinstance(drugs, dict):
@@ -177,10 +185,12 @@ def clean_route(route: dict[str, Any]) -> dict[str, Any]:
 
 
 def read_json(path: Path) -> dict[str, Any]:
+    """Read UTF-8 JSON file into a dictionary."""
     return json.loads(path.read_text(encoding="utf-8"))
 
 
 def main() -> None:
+    """CLI entrypoint that writes presentation-ready best_answer output."""
     parser = argparse.ArgumentParser(
         description="Create a clean, readable best-answer JSON from reconciled route output."
     )

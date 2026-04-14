@@ -13,6 +13,7 @@
 using namespace std;
 namespace fs = std::filesystem;
 
+// Runtime artifacts are written outside payer_sources so source inputs stay clean.
 static const char* OUTPUT_ROOT = "outputs";
 static const char* OUTPUT_PATH = "outputs/extracted_route_data.json";
 static const char* STATE_PATH = "outputs/agent_state.txt";
@@ -24,6 +25,7 @@ struct AgentState {
 };
 
 string makeDisplayName(const string& payerKey) {
+    // Convert folder keys like "blue_cross_blue_shield" to "Blue Cross Blue Shield".
     string displayName;
     bool capitalizeNext = true;
 
@@ -47,6 +49,7 @@ string makeDisplayName(const string& payerKey) {
 }
 
 bool hasAnySourceFile(const fs::path& payerDir) {
+    // A payer folder is considered valid if it has at least one known source type.
     static const vector<string> requiredSourceFiles = {
         "provider_manual.txt",
         "phone_transcript.txt",
@@ -63,6 +66,7 @@ bool hasAnySourceFile(const fs::path& payerDir) {
 }
 
 vector<Payers> discoverPayers() {
+    // Discover payer folders dynamically so adding/removing payers is data-driven.
     vector<Payers> payers;
     if (!fs::exists(PAYER_SOURCES_ROOT) || !fs::is_directory(PAYER_SOURCES_ROOT)) {
         cerr << "Payer source root directory not found: " << PAYER_SOURCES_ROOT << "\n";
@@ -94,6 +98,7 @@ vector<Payers> discoverPayers() {
 }
 
 void saveState(const AgentState& state) {
+    // Persist failure counters across restarts for stable retry behavior.
     ofstream stateFile(STATE_PATH);
     if (!stateFile.is_open()) {
         cerr << "Warning: could not write state file: " << STATE_PATH << "\n";
@@ -104,6 +109,7 @@ void saveState(const AgentState& state) {
 }
 
 AgentState loadState() {
+    // Missing state file is normal on first run.
     AgentState state;
     ifstream stateFile(STATE_PATH);
     if (!stateFile.is_open()) {
@@ -126,6 +132,7 @@ AgentState loadState() {
 
 bool runOnce() {
     try {
+        // Ensure output directory exists before writing JSON/state.
         fs::create_directories(OUTPUT_ROOT);
 
         vector<Payers> payers = discoverPayers();
@@ -177,6 +184,7 @@ int main() {
 
     cout << "AuthPipeline agent started. Interval=5 minutes.\n";
     while (true) {
+        // The agent runs continuously; orchestrators can restart it on fatal errors.
         bool success = runOnce();
         if (success) {
             state.consecutive_failures = 0;

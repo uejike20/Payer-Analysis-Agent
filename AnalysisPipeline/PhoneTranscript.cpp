@@ -9,6 +9,7 @@
 using namespace std;
 
 namespace {
+/** Trim leading/trailing whitespace. */
 string trim(const string& text) {
     size_t start = text.find_first_not_of(" \t\r\n");
     if (start == string::npos) {
@@ -19,6 +20,7 @@ string trim(const string& text) {
     return text.substr(start, end - start + 1);
 }
 
+/** Return lowercase copy for case-insensitive matching. */
 string toLowerCopy(const string& text) {
     string lowered = text;
     for (size_t i = 0; i < lowered.size(); ++i) {
@@ -27,6 +29,7 @@ string toLowerCopy(const string& text) {
     return lowered;
 }
 
+/** Map payer key to stable source ID prefix. */
 string payerPrefix(const string& payer_key) {
     if (payer_key == "aetna") {
         return "AET";
@@ -46,6 +49,7 @@ string payerPrefix(const string& payer_key) {
     return "SRC";
 }
 
+/** Extract first phone number token from a line. */
 string firstPhone(const string& text) {
     regex phonePattern("(\\(\\d{3}\\) \\d{3}-\\d{4})");
     smatch match;
@@ -55,6 +59,7 @@ string firstPhone(const string& text) {
     return "";
 }
 
+/** Extract all phone number tokens from a line. */
 vector<string> allPhones(const string& text) {
     vector<string> phones;
     regex phonePattern("(\\(\\d{3}\\) \\d{3}-\\d{4})");
@@ -66,6 +71,7 @@ vector<string> allPhones(const string& text) {
     return phones;
 }
 
+/** Extract first form-code-like token from a line. */
 string firstForm(const string& text) {
     regex formPattern("([A-Z]{2,}(?:-[A-Z0-9]+)+)");
     smatch match;
@@ -75,6 +81,7 @@ string firstForm(const string& text) {
     return "";
 }
 
+/** Return first integer in text (0 if absent). */
 int firstNumber(const string& text) {
     regex numPattern("(\\d+)");
     smatch match;
@@ -84,6 +91,7 @@ int firstNumber(const string& text) {
     return 0;
 }
 
+/** Join fields with separator when building JSON fragments. */
 string joinFields(const vector<string>& fields, const string& separator) {
     string joined;
     for (size_t i = 0; i < fields.size(); ++i) {
@@ -96,6 +104,7 @@ string joinFields(const vector<string>& fields, const string& separator) {
 }
 }
 
+/** Escape text for safe JSON output. */
 string PhoneTranscript::jsonEscape(const string& text) const {
     string escaped;
     for (size_t i = 0; i < text.size(); ++i) {
@@ -112,6 +121,7 @@ string PhoneTranscript::jsonEscape(const string& text) const {
     return escaped;
 }
 
+/** Build JSON object fragment for parsed drug requirements. */
 string PhoneTranscript::buildDrugJson() const {
     vector<string> entries;
 
@@ -136,6 +146,7 @@ string PhoneTranscript::buildDrugJson() const {
     return "        \"drugs\": {\n" + joinFields(entries, ",\n") + "\n        }";
 }
 
+/** Read and parse phone transcript source for current payer. */
 void PhoneTranscript::sourceReader() {
     submission_methods.clear();
     portal_url.clear();
@@ -296,6 +307,7 @@ void PhoneTranscript::sourceReader() {
     }
 }
 
+/** Serialize parsed phone-transcript content as one source JSON record. */
 string PhoneTranscript::toJsonRecord() const {
     vector<string> fields;
 
