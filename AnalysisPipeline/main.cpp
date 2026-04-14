@@ -8,6 +8,7 @@
 #include <filesystem>
 #include <algorithm>
 #include <cctype>
+#include <cstdlib>
 #include "Payers.h"
 
 using namespace std;
@@ -177,6 +178,9 @@ bool runOnce() {
 
 int main() {
     AgentState state = loadState();
+    const char* runOnceEnv = std::getenv("AUTHPIPELINE_RUN_ONCE");
+    const bool runOnceMode = runOnceEnv != nullptr &&
+                             (string(runOnceEnv) == "1" || string(runOnceEnv) == "true" || string(runOnceEnv) == "TRUE");
 
     const auto normalInterval = chrono::minutes(5);
     const auto failureBackoff = chrono::seconds(30);
@@ -190,10 +194,16 @@ int main() {
             state.consecutive_failures = 0;
             state.last_success_epoch = static_cast<long long>(time(nullptr));
             saveState(state);
+            if (runOnceMode) {
+                return 0;
+            }
             this_thread::sleep_for(normalInterval);
         } else {
             ++state.consecutive_failures;
             saveState(state);
+            if (runOnceMode) {
+                return 1;
+            }
 
             if (state.consecutive_failures >= maxConsecutiveFailures) {
                 cerr << "Agent exiting after " << state.consecutive_failures

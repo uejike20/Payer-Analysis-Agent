@@ -21,9 +21,12 @@ RUN useradd -m -u 1000 appuser
 
 COPY --from=build /out/authpipeline /usr/local/bin/authpipeline
 COPY --from=build /src/AnalysisPipeline/payer_sources ./payer_sources
+COPY --from=build /src/AnalysisPipeline/reconcile_latest.py ./reconcile_latest.py
+COPY --from=build /src/AnalysisPipeline/format_best_answer.py ./format_best_answer.py
+COPY --from=build /src/AnalysisPipeline/run_pipeline.sh /usr/local/bin/run_pipeline.sh
 
-RUN chown -R appuser:appuser /app/AnalysisPipeline
+RUN chmod +x /usr/local/bin/run_pipeline.sh && chown -R appuser:appuser /app/AnalysisPipeline
 
 USER 1000:1000
 
-ENTRYPOINT ["/usr/local/bin/authpipeline"]
+ENTRYPOINT ["/usr/local/bin/run_pipeline.sh"]

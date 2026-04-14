@@ -55,6 +55,18 @@ docker run --rm \
   payer-analysis-agent:latest
 ```
 
+By default, container runs are one-shot and produce all outputs (`extracted_route_data.json`, `reconciled_routes.json`, `conflicts_report.json`, `best_answer.json`) in the mounted output folder.
+
+For long-running extraction mode (no automatic reconciliation), set:
+
+```bash
+docker run --rm \
+  -e AUTHPIPELINE_MODE=continuous \
+  -v "/absolute/path/to/your/payer_sources:/app/AnalysisPipeline/payer_sources" \
+  -v "/absolute/path/to/your/output_folder:/app/AnalysisPipeline/outputs" \
+  payer-analysis-agent:latest
+```
+
 Example:
 
 ```bash
