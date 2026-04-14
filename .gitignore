@@ -6,3 +6,7 @@ __pycache__/
 AnalysisPipeline/authpipeline
 AnalysisPipeline/auth_pipeline_agent
 AnalysisPipeline/main
+
+# Distribution artifacts
+*.tar
+*.tar.gz
