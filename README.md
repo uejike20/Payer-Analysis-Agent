@@ -20,7 +20,10 @@ Use either Docker (recommended) or native C++ tooling.
 
 ## Quick Start (Docker, Recommended)
 
-From the repository root:
+Run all commands from the repository root (clone the repo, then cd into that folder). 
+i.e cd /Users/utibeejike/Downloads/AuthPipeline 
+
+Then:
 
 ```bash
 docker compose up -d --build
